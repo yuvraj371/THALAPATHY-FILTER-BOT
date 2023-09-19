@@ -181,7 +181,7 @@ python3 bot.py
 
 ## Note 🏷️
  
-* [![Contact Developer](https://img.shields.io/static/v1?label=Contact+Developer&message=On+Telegram&color=critical)](https://telegram.me/TeamHMT_Bots)
+* [![Contact Developer](https://img.shields.io/static/v1?label=Contact+Developer&message=On+Instagram&color=critical)](https://instagram.com/rc_memes_18?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D)
 * * [![Contact Developer](https://img.shields.io/static/v1?label=Contact+Developer&message=On+Telegram&color=critical)](https://telegram.me/creatorrio)
 
 [Note To A So Called Dev](https://telegram.dog/subin_works/203): 
