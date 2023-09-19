@@ -15,8 +15,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/1238muj/THALAPATHY-FILTER-BOT",
-    "repository": "https://github.com/1238muj/THALAPATHY-FILTER-BOT",
+    "website": "https://github.com/TEAM-RIO-NETWORKS/THALAPATHY-FILTER-BOT",
+    "repository": "https://github.com/TEAM-RIO-NETWORKS/THALAPATHY-FILTER-BOT",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
