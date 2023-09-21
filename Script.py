@@ -28,7 +28,7 @@ special Thanks To ❤️ Devs -
 
 -Dev 1 [Owner of this bot ]<a href='https://t.me/MR_DEVIL_DR'>MR_DEVIL_DR</a>
 
--Dev 2 <a href='https://t.me/MDKPRIME'>𝙈𝙤𝙫𝙞𝙚𝙨 𝙍𝙚𝙦𝙪𝙚𝙨𝙩 𝙄𝙣𝙛𝙤</a>
+-Dev 2 <a href='https://t.me/MDKPRIME'>MDKPRIME</a>
 """
 
 
