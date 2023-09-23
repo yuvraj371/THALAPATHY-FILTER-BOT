@@ -45,7 +45,7 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('👻 Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ 👻', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('👨‍💻'support group, url="https://telegram.me/Infinity_XBotz_support"),
+                    InlineKeyboardButton('👨‍💻support group', url="https://telegram.me/Infinity_XBotz_support"),
                     InlineKeyboardButton('🎬 Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url='https://t.me/+Qn6fthcb7wI0ZTk1')
                 ],[
                     InlineKeyboardButton('⛅ Hᴇʟᴘ', callback_data='help'),
