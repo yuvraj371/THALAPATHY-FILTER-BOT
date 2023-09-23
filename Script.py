@@ -5,9 +5,9 @@ class script(object):
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b>"""
 
     ABOUT_TXT = """<b>⍟───[ MY ᴅᴇᴛᴀɪʟꜱ ]───⍟
-‣ ᴍʏ ɴᴀᴍᴇ : <a href=https://t.me/Advance_Auto_Filter_Infinity_bot> **Advance_Auto_Filter_Infinity_bot** </a>
+‣ ᴍʏ ɴᴀᴍᴇ : <a href=https://t.me/Advance_Auto_Filter_Infinity_bot> Advance_Auto_Filter_Infinity_bot </a>
  ‣ My best friend : <a href='tg://settings'>ᴛʜɪs ᴘᴇʀsᴏɴ</a> 
- ‣ ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href='https://t.me/Madhuri_niranjan'> **Madhuri niranjan** </a> 
+ ‣ ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href='https://t.me/Madhuri_niranjan'> Madhuri niranjan </a> 
  ‣ ʟɪʙʀᴀʀʏ : <a href='https://docs.pyrogram.org/'>ᴘʏʀᴏɢʀᴀᴍ</a> 
  ‣ ʟᴀɴɢᴜᴀɢᴇ : <a href='https://www.python.org/download/releases/3.0/'>ᴘʏᴛʜᴏɴ 3</a> 
  ‣ ᴅᴀᴛᴀ ʙᴀsᴇ : <a href='https://www.mongodb.com/'>ᴍᴏɴɢᴏ ᴅʙ</a> 
@@ -15,20 +15,19 @@ Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b>"""
  ‣ ʙᴜɪʟᴅ sᴛᴀᴛᴜs : ᴠ2.7.1 [sᴛᴀʙʟᴇ]></b>"""
 
     SOURCE_TXT = """
-<b>Hᴇʏ, Tʜɪs ɪs ᴀ Oᴘᴇɴ Sᴏᴜʀᴄᴇ Pʀᴏᴊᴇᴄᴛ.
-
+<b>Hᴇʏ, Tʜɪs ɪs not an Oᴘᴇɴ Sᴏᴜʀᴄᴇ Pʀᴏᴊᴇct
+         so if you want this bot repo
+         contact 🔗 to bot owner 👨‍💻
+         
 Tʜɪs Bᴏᴛ ʜᴀs Lᴀᴛᴇsᴛ ᴀɴᴅ Aᴅᴠᴀɴᴄᴇᴅ Fᴇᴀᴛᴜʀᴇs⚡️
+you can add this bot in your group
+and get unlimited movies and web series
 
-Where is source code? - <a href='https://t.me/Infinity_XBotz'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a></b>
+special Thanks To our ❤️ Developer 😁
 
+Developer  [Owner of this bot]<a href='https://t.me/Madhuri_niranjan'> Madhuri niranjan </a>
 
-Developer - <a href='https://t.me/Madhuri_niranjan'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>
-
-special Thanks To ❤️ Devs -
-
-Developer  [Owner of this bot ]<a href='https://t.me/Madhuri_niranjan'> **Madhuri niranjan** </a>
-
-**Bot channel** 2 <a href='https://t.me/Infinity_XBotz'> **Infinity XBotz** </a>
+Bot channel <a href='https://t.me/Infinity_XBotz'> Infinity XBotz </a>
 """
 
 
