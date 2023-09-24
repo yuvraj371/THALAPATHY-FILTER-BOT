@@ -277,7 +277,7 @@ async def start(client, message):
                     ], [
                         InlineKeyboardButton('😇 Bot owner', url="https://telegram.me/Madhuri_niranjan")
                     ], [
-                        InlineKeyboardButton('❤️ Update channel ❤️', url="https://telegram.me/Infinity_XBotz)
+                        InlineKeyboardButton('❤️ Update channel ❤️', url="https://telegram.me/Infinity_XBotz")
                     ], [
                         InlineKeyboardButton('🎥 Movie 🍿 group ', url="https://t.me/+Qn6fthcb7wI0ZTk1")
                     ]
