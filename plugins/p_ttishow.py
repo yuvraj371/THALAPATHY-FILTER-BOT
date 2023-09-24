@@ -99,11 +99,16 @@ async def leave_a_chat(bot, message):
         chat = chat
     try:
         buttons = [[
-            InlineKeyboardButton('Support Group',url="https://t.me/Infinity_XBotz_support"),
-            InlineKeyboardButton('Owner', url="https://t.me/Madhuri_niranjan")
-        ],[
-            InlineKeyboardButton('Use Me Here', url=f'https://t.me/{SUPPORT_CHAT}')
-        ]]
+                    InlineKeyboardButton("🎥Movie group", url=f"https://t.me/+Qn6fthcb7wI0ZTk1")
+                 ],[
+                    InlineKeyboardButton("👨‍💻support group ", url=f"https://t.me/Infinity_XBotz_support")                                                  
+                 ],[
+                    InlineKeyboardButton("💓Update channel💓", url=f"https://t.me/Infinity_XBotz")                                                  
+                 ],[
+                    InlineKeyboardButton("😇Bot owner😇 ", url=f"https://t.me/Madhuri_niranjan")                                                     
+                 ],[
+                    InlineKeyboardButton("🗃️How to download", url=f"https://t.me/Infinity_XBotz/5")
+                  ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
             chat_id=chat,
