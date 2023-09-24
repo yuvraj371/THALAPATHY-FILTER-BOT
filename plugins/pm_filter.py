@@ -67,7 +67,13 @@ async def give_filter(client, message):
         if total_results == 0:
             return
         else:
-            return await message.reply_text(f"<b>Hᴇʏ {message.from_user.mention}, {str(total_results)} ʀᴇsᴜʟᴛs ᴀʀᴇ ғᴏᴜɴᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search}. \n\nTʜɪs ɪs ᴀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ғɪʟᴇs ғʀᴏᴍ ʜᴇʀᴇ...\n\nJᴏɪɴ ᴀɴᴅ Sᴇᴀʀᴄʜ Hᴇʀᴇ - https://t.me/+xbjscan3sfo4YzA1 /n      हैलो {message.from_user.mention}, आपकी requeste 🍿 {search} के लिए मेरे डेटाबेस में {str(total_results)} result मिले हैं। \n\nयह support chat है इसलिए आप यहां से movie 🍿 प्राप्त नहीं कर सकते......\n\nआपको movie हमारे movie 🍿 group मे मिलेगी इसलिए वहां  search 🔍 कीजिए - https://t.me/+xbjscan3sfo4YzA1</b>")
+            return await message.reply_text(
+                        text=f"<b>Hᴇʏ {message.from_user.mention}, {str(total_results)} ʀᴇsᴜʟᴛs ᴀʀᴇ ғᴏᴜɴᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search}. \n\nTʜɪs ɪs ᴀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ғɪʟᴇs ғʀᴏᴍ ʜᴇʀᴇ...\n\nJᴏɪɴ ᴀɴᴅ Sᴇᴀʀᴄʜ Hᴇʀᴇ - https://t.me/+xbjscan3sfo4YzA1 /n      हैलो {message.from_user.mention}, आपकी requeste 🍿 {search} के लिए मेरे डेटाबेस में {str(total_results)} result मिले हैं। \n\nयह support chat है इसलिए आप यहां से movie 🍿 प्राप्त नहीं कर सकते......\n\nआपको movie हमारे movie 🍿 group मे मिलेगी इसलिए वहां  search 🔍 कीजिए - https://t.me/+xbjscan3sfo4YzA1</b>",
+                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🎥Movie group", url=f"https://t.me/+Qn6fthcb7wI0ZTk1")]
+                                           [InlineKeyboardButton("👨‍💻support group ", url=f"https://t.me/Infinity_XBotz_support")]
+                                           [InlineKeyboardButton("💓Update channel💓", url=f"https://t.me/Infinity_XBotz")]
+                                           [InlineKeyboardButton("😇Bot owner😇 ", url=f"https://t.me/Madhuri_niranjan")]
+                                           [InlineKeyboardButton("🗃️How to download", url=f"https://t.me/Infinity_XBotz/5")]])
 
 @Client.on_message(filters.private & filters.text & filters.incoming)
 async def pm_text(bot, message):
