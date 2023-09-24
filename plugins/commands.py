@@ -272,6 +272,14 @@ async def start(client, message):
                         InlineKeyboardButton('📂 Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ 📂', url=g)
                     ], [
                         InlineKeyboardButton('⁉️ Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ⁉️', url=await get_tutorial(chat_id))
+                    ], [
+                        InlineKeyboardButton('👨‍💻 Support group ', url="https://telegram.me/Infinity_XBotz_support")
+                    ], [
+                        InlineKeyboardButton('😇 Bot owner', url ="https://telegram.me/Madhuri_niranjan")
+                    ], [
+                        InlineKeyboardButton('❤️ Update channel ❤️'="https://telegram.me/Infinity_XBotz")
+                    ], [
+                        InlineKeyboardButton('🎥 Movie 🍿 group '="https://t.me/+Qn6fthcb7wI0ZTk1")
                     ]
                 ]
             )
@@ -293,6 +301,14 @@ async def start(client, message):
                         InlineKeyboardButton('📂 Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ 📂', url=g)
                     ], [
                         InlineKeyboardButton('⁉️ Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ⁉️', url=await get_tutorial(chat_id))
+                    ], [
+                        InlineKeyboardButton('👨‍💻 Support group ', url="https://telegram.me/Infinity_XBotz_support")
+                    ], [
+                        InlineKeyboardButton('😇 Bot owner', url ="https://telegram.me/Madhuri_niranjan")
+                    ], [
+                        InlineKeyboardButton('❤️ Update channel ❤️'="https://telegram.me/Infinity_XBotz")
+                    ], [
+                        InlineKeyboardButton('🎥 Movie 🍿 group '="https://t.me/+Qn6fthcb7wI0ZTk1")
                     ]
                 ]
             )
