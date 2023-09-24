@@ -38,10 +38,15 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-                    InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                    InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                    InlineKeyboardButton("🎥Movie group", url=f"https://t.me/+Qn6fthcb7wI0ZTk1")
                  ],[
-                    InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/Madhuri_niranjan")
+                    InlineKeyboardButton("👨‍💻support group ", url=f"https://t.me/Infinity_XBotz_support")                                                  
+                 ],[
+                    InlineKeyboardButton("💓Update channel💓", url=f"https://t.me/Infinity_XBotz")                                                  
+                 ],[
+                    InlineKeyboardButton("😇Bot owner😇 ", url=f"https://t.me/Madhuri_niranjan")                                                     
+                 ],[
+                    InlineKeyboardButton("🗃️How to download", url=f"https://t.me/Infinity_XBotz/5")
                   ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -61,10 +66,15 @@ async def save_group(bot, message):
                                                  caption=(script.MELCOW_ENG.format(u.mention, message.chat.title)),
                                                  reply_markup=InlineKeyboardMarkup(
                                                                          [[
-                                                                           InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                                                                           InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                                                                           InlineKeyboardButton("🎥Movie group", url=f"https://t.me/+Qn6fthcb7wI0ZTk1")
                                                                         ],[
-                                                                           InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/Madhuri_niranjan")
+                                                                           InlineKeyboardButton("👨‍💻support group ", url=f"https://t.me/Infinity_XBotz_support")
+                                                                        ],[
+                                                                            InlineKeyboardButton("💓Update channel💓", url=f"https://t.me/Infinity_XBotz")
+                                                                        ],[
+                                                                            InlineKeyboardButton("😇Bot owner😇 ", url=f"https://t.me/Madhuri_niranjan")
+                                                                        ],[
+                                                                            InlineKeyboardButton("🗃️How to download", url=f"https://t.me/Infinity_XBotz/5")
                                                                          ]]
                                                  ),
                                                  parse_mode=enums.ParseMode.HTML
