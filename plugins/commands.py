@@ -160,7 +160,7 @@ async def start(client, message):
                             ],[
                                 InlineKeyboardButton('😇Bot owner😇', url="https://t.me/Madhuri_niranjan")
                             ],[
-                                InlineKeyboardButton('🎥Movie group', url="https://t.me/+Qn6fthcb7wI0ZTk1')
+                                InlineKeyboardButton('🎥Movie group', url="https://t.me/+Qn6fthcb7wI0ZTk1")
                             ],[
                                 InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
                             ]
@@ -183,7 +183,7 @@ async def start(client, message):
                             ],[
                                 InlineKeyboardButton("Bot owner", url="t.me/Madhuri_niranjan")
                             ],[
-                                InlineKeyboardButtom("🎥 Movie group", url="https://t.me/+Qn6fthcb7wI0ZTk1')
+                                InlineKeyboardButtom("🎥 Movie group", url="https://t.me/+Qn6fthcb7wI0ZTk1")
                             ],[   
                                 InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
                             ]
@@ -360,7 +360,7 @@ async def start(client, message):
                             ],[
                                 InlineKeyboardButton("Bot owner", url="t.me/Madhuri_niranjan")
                             ],[
-                                InlineKeyboardButtom("🎥 Movie group", url="https://t.me/+Qn6fthcb7wI0ZTk1')
+                                InlineKeyboardButtom("🎥 Movie group", url="https://t.me/+Qn6fthcb7wI0ZTk1")
                             ],[   
                                 InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
                             ]
@@ -434,7 +434,7 @@ async def start(client, message):
                             ],[
                                 InlineKeyboardButton("Bot owner", url="t.me/Madhuri_niranjan")
                             ],[
-                                InlineKeyboardButtom("🎥 Movie group", url="https://t.me/+Qn6fthcb7wI0ZTk1')
+                                InlineKeyboardButtom("🎥 Movie group", url="https://t.me/+Qn6fthcb7wI0ZTk1")
                             ],[   
                                 InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
                             ]
@@ -498,7 +498,7 @@ async def start(client, message):
                             ],[
                                 InlineKeyboardButton("Bot owner", url="t.me/Madhuri_niranjan")
                             ],[
-                                InlineKeyboardButtom("🎥 Movie group", url="https://t.me/+Qn6fthcb7wI0ZTk1')
+                                InlineKeyboardButtom("🎥 Movie group", url="https://t.me/+Qn6fthcb7wI0ZTk1")
                             ],[   
                                 InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
                             ]
