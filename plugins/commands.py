@@ -293,17 +293,14 @@ async def start(client, message):
         k = await client.send_message(chat_id=user,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files.file_name}</code> \n\n🔗Sɪᴢᴇ ➠ : {get_size(files.file_size)}\n\n📂Fɪʟᴇ ʟɪɴᴋ ➠ : {g}\n\n<i>Note: This message is deleted in 20 mins to avoid copyrights. Save the link to Somewhere else/n/nनोट: कॉपीराइट से बचने के लिए यह massege 20 मिनट के बाद हटा दिया जाता है, इसलिए लिंक को saved massages या कहीं और save/forward करले।।/n/n📌Important: Watch this video to know how to open shareus link for download movies and web series from our movie request group./nVideo link 🔗 https://telegram.me/Infinity_XBotz/5  /nThank you 🙏😌/n/n📌महत्वपूर्ण: हमारे infinity movie group से movie और webseries download कैसे करे, यह जानने के लिए इस वीडियो को देखें।/nवीडियो लिंक 🔗 https://telegram.me/Infinity_XBotz/5 /n धन्यवाद 🙏😌</i></b>", reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('📂 Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ 📂', url=g)
-                    ], [
+                        InlineKeyboardButton('📂 Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ 📂', url=g),
                         InlineKeyboardButton('⁉️ Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ⁉️', url=await get_tutorial(chat_id))
                     ], [
-                        InlineKeyboardButton('👨‍💻 Support group ', url="https://telegram.me/Infinity_XBotz_support")
-                    ], [
-                        InlineKeyboardButton('😇 Bot owner', url="https://telegram.me/Madhuri_niranjan")
-                    ], [
-                        InlineKeyboardButton('❤️ Update channel ❤️', url="https://telegram.me/Infinity_XBotz")
-                    ], [
+                        InlineKeyboardButton('👨‍💻 Support group ', url="https://telegram.me/Infinity_XBotz_support"),
                         InlineKeyboardButton('🎥 Movie 🍿 group ', url="https://t.me/+Qn6fthcb7wI0ZTk1")
+                    ], [
+                        InlineKeyboardButton('😇 Bot owner 😇', url="https://telegram.me/Madhuri_niranjan"),                        
+                        InlineKeyboardButton('❤️' Update channel ❤️, url=CHNL_LNK)
                     ]
                 ]
             )
