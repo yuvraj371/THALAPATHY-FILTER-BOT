@@ -300,7 +300,7 @@ async def start(client, message):
                         InlineKeyboardButton('🎥 Movie 🍿 group ', url="https://t.me/+Qn6fthcb7wI0ZTk1")
                     ], [
                         InlineKeyboardButton('😇 Bot owner 😇', url="https://telegram.me/Madhuri_niranjan"),                        
-                        InlineKeyboardButton('❤️' Update channel ❤️, url=CHNL_LNK)
+                        InlineKeyboardButton('❤️ Update channel ❤️', url=CHNL_LNK)
                     ]
                 ]
             )
