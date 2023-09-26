@@ -348,7 +348,7 @@ async def start(client, message):
                     [
                             [
                                 InlineKeyboardButton('👨‍💻Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
-                                InlineKeyboardButton('🗃️🎥Movie group, url="https://t.me/+Qn6fthcb7wI0ZTk1")
+                                InlineKeyboardButton('🗃️🎥Movie group', url="https://t.me/+Qn6fthcb7wI0ZTk1")
                             ],[
                                 InlineKeyboardButton("😇Bot owner😇", url="t.me/Madhuri_niranjan"),
                                 InlineKeyboardButtom("❤️Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ❤️", url=CHNL_LNK)
