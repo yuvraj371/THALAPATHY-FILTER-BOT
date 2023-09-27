@@ -268,7 +268,7 @@ async def start(client, message):
                 [
                     [
                         InlineKeyboardButton('📂Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ📂', url=g),
-                        InlineKeyboardButton('⁉️Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ⁉️', url=await get_tutorial(chat_id))
+                        InlineKeyboardButton('❓Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ❓', url=await get_tutorial(chat_id))
                     ], [
                         InlineKeyboardButton('👨‍💻Support group', url="https://telegram.me/Infinity_XBotz_support"),
                         InlineKeyboardButton('🎥Movie group', url="https://t.me/+Qn6fthcb7wI0ZTk1")
@@ -294,7 +294,7 @@ async def start(client, message):
                 [
                     [
                         InlineKeyboardButton('📂Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ📂', url=g),
-                        InlineKeyboardButton('⁉️Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ⁉️', url=await get_tutorial(chat_id))
+                        InlineKeyboardButton('❓Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ❓', url=await get_tutorial(chat_id))
                     ], [
                         InlineKeyboardButton('👨‍💻Support group', url="https://telegram.me/Infinity_XBotz_support"),
                         InlineKeyboardButton('🎥Movie group', url="https://t.me/+Qn6fthcb7wI0ZTk1")
@@ -381,7 +381,7 @@ async def start(client, message):
                     [
                        [
                             InlineKeyboardButton('📂Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ📂', url=g),
-                            InlineKeyboardButton('⁉️Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ⁉️', url=await get_tutorial(chat_id))
+                            InlineKeyboardButton('❓Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ❓', url=await get_tutorial(chat_id))
                        ],[
                             InlineKeyboardButton('👨‍💻Support group', url="https://telegram.me/Infinity_XBotz_support"),
                             InlineKeyboardButton('🎥Movie group', url="https://t.me/+Qn6fthcb7wI0ZTk1")
