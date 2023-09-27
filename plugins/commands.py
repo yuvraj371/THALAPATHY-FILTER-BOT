@@ -264,11 +264,11 @@ async def start(client, message):
         chat_id = int("-" + file_id.split("-")[1])
         userid = message.from_user.id if message.from_user else None
         g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=allfiles_{file_id}")
-        k = await client.send_message(chat_id=message.from_user.id,text=f"<b>Get All Files in a Single Click!!!</b>\n\n📂 ʟɪɴᴋ ➠ : {g}\n\n<i>Note: This message is deleted in 5 mins to avoid copyrights. Save the link to Somewhere else</i>\n\nनोट: कॉपीराइट से बचने के लिए यह message 5 मिनट के बाद हटा दिया जाता है, इसलिए लिंक को saved messages या कहीं और save/forward करले।।\n\n📌<b>Important:</b> Watch this video to know how to open shareus link for download movies and web series from our movie request group.\n\nVideo link 🔗<a href='https://telegram.me/Infinity_XBotz/5'> Click here </a>\n\nThank you 🙏😌\n\n📌महत्वपूर्ण: हमारे infinity movie group से movie और webseries download कैसे करे, यह जानने के लिए इस वीडियो को देखें।\n\nवीडियो लिंक 🔗<a href='https://telegram.me/Infinity_XBotz/5'> Click here </a>\n\nधन्यवाद 🙏😌", reply_markup=InlineKeyboardMarkup(
+        k = await client.send_message(chat_id=message.from_user.id,text=f"<b>Get All Files in a Single Click!!!</b>\n\n📂 ʟɪɴᴋ ➠ : {g}\n\n<i>Note: This message is deleted in 5 mins to avoid copyrights. Save the link to Somewhere else</i>\n\nनोट: कॉपीराइट से बचने के लिए यह message 5 मिनट के बाद हटा दिया जाता है, इसलिए लिंक को saved messages या कहीं और save/forward करले।।\n\n📌<b>Important:</b> Click ❓ How to download button below to know how to open shareus link for download movies and web series from our movie request group.\n\nThank you 🙏😌\n\n📌महत्वपूर्ण: हमारे infinity movie group से movie और webseries download कैसे करे, यह जानने के लिए नीचे दिए गए ❓How to Download button पर click करे।।\n\nधन्यवाद 🙏😌", reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('📂Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ📂', url=g),
-                        InlineKeyboardButton('❓Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ❓', url=await get_tutorial(chat_id))
+                        InlineKeyboardButton('📂Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ', url=g),
+                        InlineKeyboardButton('❓Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ', url=await get_tutorial(chat_id))
                     ], [
                         InlineKeyboardButton('👨‍💻Support group', url="https://telegram.me/Infinity_XBotz_support"),
                         InlineKeyboardButton('🎥Movie group', url="https://t.me/+Qn6fthcb7wI0ZTk1")
@@ -293,8 +293,8 @@ async def start(client, message):
         k = await client.send_message(chat_id=user,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files.file_name}</code> \n\n🔗Sɪᴢᴇ ➠ : {get_size(files.file_size)}\n\n📂Fɪʟᴇ ʟɪɴᴋ ➠ : {g}\n\n<i>Note: This message is deleted in 20 mins to avoid copyrights. Save the link to Somewhere else/n/nनोट: कॉपीराइट से बचने के लिए यह massege 20 मिनट के बाद हटा दिया जाता है, इसलिए लिंक को saved massages या कहीं और save/forward करले।।/n/n📌Important: Watch this video to know how to open shareus link for download movies and web series from our movie request group./nVideo link 🔗 https://telegram.me/Infinity_XBotz/5  /nThank you 🙏😌/n/n📌महत्वपूर्ण: हमारे infinity movie group से movie और webseries download कैसे करे, यह जानने के लिए इस वीडियो को देखें।/nवीडियो लिंक 🔗 https://telegram.me/Infinity_XBotz/5 /n धन्यवाद 🙏😌</i></b>", reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('📂Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ📂', url=g),
-                        InlineKeyboardButton('❓Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ❓', url=await get_tutorial(chat_id))
+                        InlineKeyboardButton('📂Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ', url=g),
+                        InlineKeyboardButton('❓Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ', url=await get_tutorial(chat_id))
                     ], [
                         InlineKeyboardButton('👨‍💻Support group', url="https://telegram.me/Infinity_XBotz_support"),
                         InlineKeyboardButton('🎥Movie group', url="https://t.me/+Qn6fthcb7wI0ZTk1")
@@ -380,8 +380,8 @@ async def start(client, message):
             k = await client.send_message(chat_id=message.from_user.id,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files.file_name}</code> \n\n🔗Sɪᴢᴇ ➠ : {get_size(files.file_size)}\n\n📂Fɪʟᴇ ʟɪɴᴋ ➠ : {g}\n\n<i>Note: This message is deleted in 20 mins to avoid copyrights. Save the link to Somewhere else/n/nनोट: कॉपीराइट से बचने के लिए यह massege 20 मिनट के बाद हटा दिया जाता है, इसलिए लिंक को saved massages या कहीं और save/forward करले।।/n/n📌Important: Watch this video to know how to open shareus link for download movies and web series from our movie request group./nVideo link 🔗 https://telegram.me/Infinity_XBotz/5  /nThank you 🙏😌/n/n📌महत्वपूर्ण: हमारे infinity movie group से movie और webseries download कैसे करे, यह जानने के लिए इस वीडियो को देखें।/nवीडियो लिंक 🔗 https://telegram.me/Infinity_XBotz/5 /n धन्यवाद 🙏😌</i></b>", reply_markup=InlineKeyboardMarkup(
                     [
                        [
-                            InlineKeyboardButton('📂Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ📂', url=g),
-                            InlineKeyboardButton('❓Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ❓', url=await get_tutorial(chat_id))
+                            InlineKeyboardButton('📂Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ', url=g),
+                            InlineKeyboardButton('❓Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ', url=await get_tutorial(chat_id))
                        ],[
                             InlineKeyboardButton('👨‍💻Support group', url="https://telegram.me/Infinity_XBotz_support"),
                             InlineKeyboardButton('🎥Movie group', url="https://t.me/+Qn6fthcb7wI0ZTk1")
