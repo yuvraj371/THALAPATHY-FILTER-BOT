@@ -54,7 +54,7 @@ async def start(client, message):
                       InlineKeyboardButton('⛅ Hᴇʟᴘ', callback_data='help'),
                       InlineKeyboardButton('👽 Aʙᴏᴜᴛ', callback_data='about')
                    ],[
-                      InlineKeyboardButton('❓How to Download', url="https://Infinity_XBotz/5"),
+                      InlineKeyboardButton('❓How to Download', url="https://t.me/Infinity_XBotz/5"),
                       InlineKeyboardButton('😇Bot owner😇', url="https://telegram.me/Madhuri_niranjan")
                    ],[
                       InlineKeyboardButton('❤️ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ❤️', url=CHNL_LNK)
@@ -109,7 +109,7 @@ async def start(client, message):
                       InlineKeyboardButton('⛅ Hᴇʟᴘ', callback_data='help'),
                       InlineKeyboardButton('👽 Aʙᴏᴜᴛ', callback_data='about')
                    ],[
-                      InlineKeyboardButton('❓How to Download', url="https://Infinity_XBotz/5"),
+                      InlineKeyboardButton('❓How to Download', url="https://t.me/Infinity_XBotz/5"),
                       InlineKeyboardButton('😇Bot owner', url="https://telegram.me/Madhuri_niranjan")
                    ],[
                       InlineKeyboardButton('❤️ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ❤️', url=CHNL_LNK)
