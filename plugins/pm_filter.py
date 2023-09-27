@@ -82,7 +82,7 @@ async def give_filter(client, message):
                                                             InlineKeyboardButton("😇Bot owner😇 ", url="https://t.me/Madhuri_niranjan")
                                                          ],[
                                                             InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5")
-                                                          ]]
+                                                          ]])
           )
             
 @Client.on_message(filters.private & filters.text & filters.incoming)
@@ -94,11 +94,15 @@ async def pm_text(bot, message):
     if user_id in ADMINS: return # ignore admins
     await message.reply_text(
          text=f"<b>ʜᴇʏ {user} 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ɪᴛ ɪɴ ᴏᴜʀ <a href=https://t.me/+xbjscan3sfo4YzA1>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇 /n हैलो {user} 😍 ,\n\nआपको यहां पर movie 🍿 नहीं मिलेगी कृपया हमारे movie 🍿 group में search 🔎 करे<a href=https://t.me/+xbjscan3sfo4YzA1>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>",   
-         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🎥Movie group", url="https://t.me/+Qn6fthcb7wI0ZTk1")]
-                                           [InlineKeyboardButton("👨‍💻support group ", url="https://t.me/Infinity_XBotz_support")]
-                                           [InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz")]
-                                           [InlineKeyboardButton("😇Bot owner😇 ", url="https://t.me/Madhuri_niranjan")]
-                                           [InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5")]])
+         reply_markup=InlineKeyboardMarkup([[
+                                             InlineKeyboardButton("🎥Movie group", url="https://t.me/+Qn6fthcb7wI0ZTk1"),
+                                             InlineKeyboardButton("👨‍💻support group ", url="https://t.me/Infinity_XBotz_support")
+                                          ],[ 
+                                             InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz"),
+                                             InlineKeyboardButton("😇Bot owner😇 ", url="https://t.me/Madhuri_niranjan")
+                                          ],[
+                                             InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5")
+                                           ]])
     )
     await bot.send_message(
         chat_id=LOG_CHANNEL,
