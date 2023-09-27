@@ -290,7 +290,7 @@ async def start(client, message):
         files_ = await get_file_details(file_id)
         files = files_[0]
         g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
-        k = await client.send_message(chat_id=user,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files.file_name}</code> \n\n🔗Sɪᴢᴇ ➠ : {get_size(files.file_size)}\n\n📂Fɪʟᴇ ʟɪɴᴋ ➠ : {g}\n\n<i>Note: This message is deleted in 20 mins to avoid copyrights. Save the link to Somewhere else/n/nनोट: कॉपीराइट से बचने के लिए यह massege 20 मिनट के बाद हटा दिया जाता है, इसलिए लिंक को saved massages या कहीं और save/forward करले।।/n/n📌Important: Watch this video to know how to open shareus link for download movies and web series from our movie request group./nVideo link 🔗 https://telegram.me/Infinity_XBotz/5  /nThank you 🙏😌/n/n📌महत्वपूर्ण: हमारे infinity movie group से movie और webseries download कैसे करे, यह जानने के लिए इस वीडियो को देखें।/nवीडियो लिंक 🔗 https://telegram.me/Infinity_XBotz/5 /n धन्यवाद 🙏😌</i></b>", reply_markup=InlineKeyboardMarkup(
+        k = await client.send_message(chat_id=user,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files.file_name}</code>\n\n🔗Sɪᴢᴇ ➠ : {get_size(files.file_size)}\n\n📂Fɪʟᴇ ʟɪɴᴋ ➠ : {g}\n\n<i>Note: This message is deleted in 20 mins to avoid copyrights. Save the link to Somewhere else</i>\n\nनोट: कॉपीराइट से बचने के लिए यह message 20 मिनट के बाद हटा दिया जाता है, इसलिए लिंक को saved messages या कहीं और save/forward करले।।\n\n📌<b>Important:</b> Click ❓How to Download button below to know how to open shareus link for downloading movies and web series from our movie request group.\n\nThank you 🙏😌\n\n📌महत्वपूर्ण: हमारे infinity movie group से movie और webseries download कैसे करे, यह जानने के लिए नीचे दिए गए ❓How to Download button पर click करे।।\n\nधन्यवाद 🙏😌</i></b>", reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton('📂Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ', url=g),
@@ -359,7 +359,12 @@ async def start(client, message):
                 )
             )
             filesarr.append(msg)
-        k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there/n Thank you 🙏 😊/n/nनोट: कॉपीराइट से बचने के लिए यह 🗃️ file/video 20 मिनट के बाद हटा दिया जाता है, इसलिए 🗃️ file/video को saved massages या कहीं और forward करले /n धन्यवाद 🙏😌</i></b>")
+        k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️❗️❗️</u></b>\n\n"
+    f"This Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i>(Due to Copyright Issues)</i></b>.\n\n"
+    f"<b><i>Please forward these ALL Files/Videos to your Saved Messages and start the download there.</i></b>\n\n"
+    f"Thank you 🙏 😊\n\n"
+    f"नोट: कॉपीराइट से बचने के लिए यह 🗃️ file/video 10 मिनट के बाद हटा दिया जाता है, इसलिए 🗃️ file/video को saved messages या कहीं और forward करले\n\n"
+    f"धन्यवाद 🙏😌")
         await asyncio.sleep(600)
         for x in filesarr:
             await x.delete()
@@ -377,7 +382,15 @@ async def start(client, message):
             files_ = await get_file_details(file_id)
             files = files_[0]
             g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
-            k = await client.send_message(chat_id=message.from_user.id,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files.file_name}</code> \n\n🔗Sɪᴢᴇ ➠ : {get_size(files.file_size)}\n\n📂Fɪʟᴇ ʟɪɴᴋ ➠ : {g}\n\n<i>Note: This message is deleted in 20 mins to avoid copyrights. Save the link to Somewhere else/n/nनोट: कॉपीराइट से बचने के लिए यह massege 20 मिनट के बाद हटा दिया जाता है, इसलिए लिंक को saved massages या कहीं और save/forward करले।।/n/n📌Important: Watch this video to know how to open shareus link for download movies and web series from our movie request group./nVideo link 🔗 https://telegram.me/Infinity_XBotz/5  /nThank you 🙏😌/n/n📌महत्वपूर्ण: हमारे infinity movie group से movie और webseries download कैसे करे, यह जानने के लिए इस वीडियो को देखें।/nवीडियो लिंक 🔗 https://telegram.me/Infinity_XBotz/5 /n धन्यवाद 🙏😌</i></b>", reply_markup=InlineKeyboardMarkup(
+            k = await client.send_message(chat_id=message.from_user.id,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files.file_name}</code>\n\n"
+    f"🔗Sɪᴢᴇ ➠ : {get_size(files.file_size)}\n\n"
+    f"📂Fɪʟᴇ ʟɪɴᴋ ➠ : {g}\n\n"
+    f"<i>Note: This message is deleted in 20 mins to avoid copyrights. Save the link to Somewhere else</i>\n\n"
+    f"नोट: कॉपीराइट से बचने के लिए यह message 20 मिनट के बाद हटा दिया जाता है, इसलिए लिंक को saved messages या कहीं और forward करले।।\n\n"
+    f"📌<b>Important:</b> Click ❓How to Download button below to know how to open shareus link for downloading movies and web series from our movie request group.\n\n"
+    f"Thank you 🙏😌\n\n"
+    f"📌महत्वपूर्ण: हमारे infinity movie group से movie और webseries download कैसे करे, यह जानने के लिए नीचे दिए गए ❓How to Download button पर click करे।।\n\n"
+    f"धन्यवाद 🙏😌", reply_markup=InlineKeyboardMarkup(
                     [
                        [
                             InlineKeyboardButton('📂Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ', url=g),
@@ -442,7 +455,12 @@ async def start(client, message):
             btn = [[
                 InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
             ]]
-            k = await msg.reply("<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie File/Video will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this File/Video to your Saved Messages and Start Download there/n Thank you 🙏 😊/n/nनोट: कॉपीराइट से बचने के लिए यह 🗃️ file/video 20 मिनट के बाद हटा दिया जाता है, इसलिए 🗃️ file/video को saved massages या कहीं और forward करले /n धन्यवाद 🙏😌</i></b>",quote=True)
+            k = await msg.reply(text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\n"
+    f"This Movie File/Video will be deleted in <b><u>10 mins</u> 🫥 <i>(Due to Copyright Issues)</i></b>.\n\n"
+    f"<b><i>Please forward this File/Video to your Saved Messages and start the download there.</i></b>\n\n"
+    f"Thank you 🙏 😊\n\n"
+    f"नोट: कॉपीराइट से बचने के लिए यह 🗃️ file/video 10 मिनट के बाद हटा दिया जाता है, इसलिए 🗃️ file/video को saved messages या कहीं और forward करले\n\n"
+    f"धन्यवाद 🙏😌",quote=True)
             await asyncio.sleep(600)
             await msg.delete()
             await k.edit_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
@@ -494,7 +512,12 @@ async def start(client, message):
     btn = [[
         InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
     ]]
-    k = await msg.reply("<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie File/Video will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this File/Video to your Saved Messages and Start Download there/n Thank you 🙏 😊/n/nनोट: कॉपीराइट से बचने के लिए यह 🗃️ file/video 20 मिनट के बाद हटा दिया जाता है, इसलिए 🗃️ file/video को saved massages या कहीं और forward करले /n धन्यवाद 🙏😌</i></b>",quote=True)
+    k = await msg.reply(text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\n"
+    f"This Movie File/Video will be deleted in <b><u>10 mins</u> 🫥 <i>(Due to Copyright Issues)</i></b>.\n\n"
+    f"<b><i>Please forward this File/Video to your Saved Messages and start the download there.</i></b>\n\n"
+    f"Thank you 🙏 😊\n\n"
+    f"नोट: कॉपीराइट से बचने के लिए यह 🗃️ file/video 10 मिनट के बाद हटा दिया जाता है, इसलिए 🗃️ file/video को saved messages या कहीं और forward करले\n\n"
+    f"धन्यवाद 🙏😌",quote=True)
     await asyncio.sleep(600)
     await msg.delete()
     await k.edit_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
