@@ -1324,7 +1324,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ],[
                     InlineKeyboardButton('⛅ Hᴇʟᴘ', callback_data='help'),
                     InlineKeyboardButton('💪 Aʙᴏᴜᴛ 👽', callback_data='about')
-                ],[                        
+                ],[
+                    InlineKeyboardButton('❓How to Download', url="https://Infinity_XBotz/5"),
+                    InlineKeyboardButton('😇Bot owner😇', url="https://telegram.me/Madhuri_niranjan")
+                ],[
                     InlineKeyboardButton('❤️ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ❤️', url=CHNL_LNK)
                   ]]
         
