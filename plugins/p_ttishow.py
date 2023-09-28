@@ -38,12 +38,10 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-                    InlineKeyboardButton("🎥Movie group", url="https://t.me/+Qn6fthcb7wI0ZTk1")
-                 ],[
+                    InlineKeyboardButton("🎥Movie group", url="https://t.me/+Qn6fthcb7wI0ZTk1"),
                     InlineKeyboardButton("👨‍💻support group ", url="https://t.me/Infinity_XBotz_support")                                                  
                  ],[
-                    InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz")                                                  
-                 ],[
+                    InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz"),                                                  
                     InlineKeyboardButton("😇Bot owner😇 ", url="https://t.me/Madhuri_niranjan")                                                     
                  ],[
                     InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5")
@@ -66,12 +64,10 @@ async def save_group(bot, message):
                                                  caption=(script.MELCOW_ENG.format(u.mention, message.chat.title)),
                                                  reply_markup=InlineKeyboardMarkup(
                                                                          [[
-                                                                           InlineKeyboardButton("🎥Movie group", url="https://t.me/+Qn6fthcb7wI0ZTk1")
-                                                                        ],[
+                                                                           InlineKeyboardButton("🎥Movie group", url="https://t.me/+Qn6fthcb7wI0ZTk1"),
                                                                            InlineKeyboardButton("👨‍💻support group ", url="https://t.me/Infinity_XBotz_support")
                                                                         ],[
-                                                                            InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz")
-                                                                        ],[
+                                                                            InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz"),
                                                                             InlineKeyboardButton("😇Bot owner😇 ", url="https://t.me/Madhuri_niranjan")
                                                                         ],[
                                                                             InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5")
@@ -99,12 +95,10 @@ async def leave_a_chat(bot, message):
         chat = chat
     try:
         buttons = [[
-                    InlineKeyboardButton("🎥Movie group", url="https://t.me/+Qn6fthcb7wI0ZTk1")
-                 ],[
+                    InlineKeyboardButton("🎥Movie group", url="https://t.me/+Qn6fthcb7wI0ZTk1"),
                     InlineKeyboardButton("👨‍💻support group ", url="https://t.me/Infinity_XBotz_support")                                                  
                  ],[
-                    InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz")                                                  
-                 ],[
+                    InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz"),                                                  
                     InlineKeyboardButton("😇Bot owner😇 ", url="https://t.me/Madhuri_niranjan")                                                     
                  ],[
                     InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5")
