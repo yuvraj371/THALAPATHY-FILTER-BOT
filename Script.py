@@ -22,7 +22,7 @@ Tʜɪs Bᴏᴛ ʜᴀs Lᴀᴛᴇsᴛ ᴀɴᴅ Aᴅᴠᴀɴᴄᴇᴅ Fᴇᴀᴛ�
 you can add this bot in your group
 and get unlimited movies and web series\n\n
 special Thanks To our ❤️ Developer 😁\n
-Developer  [Owner of this bot]\n<a href='https://t.me/Madhuri_niranjan'> Madhuri niranjan </a>
+Developer  [Owner of this bot]\n         <a href='https://t.me/Madhuri_niranjan'> Madhuri niranjan </a>
 \nBot channel <a href='https://t.me/Infinity_XBotz'> Infinity XBotz </a>
 """
 
