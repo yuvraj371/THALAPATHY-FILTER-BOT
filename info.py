@@ -43,15 +43,15 @@ SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://krishna527062:yuvraj178@advance.1hee3uv.mongodb.net/?retryWrites=true&w=majority")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Krishna527062")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://rampatel638858:yuvraj178@cluster0.mameiar.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "rampatel638858")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
 SHORTLINK_URL = environ.get('SHORTLINK_URL', '')
 SHORTLINK_API = environ.get('SHORTLINK_API', '')
-IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
+IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "8")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
@@ -60,7 +60,7 @@ GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+Qn6fthcb7wI0ZTk1')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/Infinity_XBotz')
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Infinity_XBotz/5')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
-MSG_ALRT = environ.get('MSG_ALRT', '**what are you looking at ❤️**')
+MSG_ALRT = environ.get('MSG_ALRT', 'what are you looking at ❤️')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001531616345'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Infinity_XBotz_support')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
