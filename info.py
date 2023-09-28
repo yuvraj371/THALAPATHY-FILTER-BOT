@@ -15,7 +15,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '21938068'))
 API_HASH = environ.get('API_HASH', 'c18fd98f3e58484df0aecd95a3d5a6a9')
-BOT_TOKEN = environ.get('BOT_TOKEN', "6612163922:AAGGjN0bJZfIgiGVDW9No82ZI4N7Dgza0aM")
+BOT_TOKEN = environ.get('BOT_TOKEN', "6682177861:AAFXBR247VBRhGo5aQ7onrMloeRXYlfk3lQ")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -96,8 +96,8 @@ else:
     ON_HEROKU = False
 BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
 FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
-URL = "https://advance-auto-filter-infinity-bot.onrender.com".format(FQDN) if ON_HEROKU or NO_PORT else \
-    "https://advance-auto-filter-infinity-bot.onrender.com/".format(FQDN, PORT)
+URL = "https://backup-aafib.onrender.com".format(FQDN) if ON_HEROKU or NO_PORT else \
+    "https://backup-aafib.onrender.com/".format(FQDN, PORT)
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
 WORKERS = int(environ.get('WORKERS', '4'))
 SESSION_NAME = str(environ.get('SESSION_NAME', 'LazyBot'))
@@ -112,9 +112,9 @@ else:
     ON_HEROKU = False
 HAS_SSL=bool(getenv('HAS_SSL',False))
 if HAS_SSL:
-    URL = "https://advance-auto-filter-infinity-bot.onrender.com/".format(FQDN)
+    URL = "https://backup-aafib.onrender.com/".format(FQDN)
 else:
-    URL = "https://advance-auto-filter-infinity-bot.onrender.com/".format(FQDN)
+    URL = "https://backup-aafib.onrender.com/".format(FQDN)
 
 
 
