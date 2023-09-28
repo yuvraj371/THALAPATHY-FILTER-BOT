@@ -1,5 +1,5 @@
 class script(object):
-    START_TXT = """<b>Hᴇʟʟᴏ Sweetheart {}, ᴍʏ ɴᴀᴍᴇ <a href=https://t.me/{}>{}</a>, I Cᴀɴ Pʀᴏᴠɪᴅᴇ Mᴏᴠɪᴇs, Jᴜsᴛ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ Aɴᴅ Eɴᴊᴏʏ😍</b>"""
+    START_TXT = """<b>Hᴇʟʟᴏ Sweetheart {}, ᴍʏ ɴᴀᴍᴇ <a href=https://t.me/{}>{}</a>, I Cᴀɴ Pʀᴏᴠɪᴅᴇ Mᴏᴠɪᴇs, Jᴜsᴛ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ Aɴᴅ Eɴᴊᴏʏ😍</b>\n\nMantained by:<a href='https://telegram.me/Madhuri_niranjan'>Developer</a>"""
 
     HELP_TXT = """<b>Hᴇʏ {}
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b>"""
@@ -17,17 +17,13 @@ Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b>"""
     SOURCE_TXT = """
 <b>Hᴇʏ, Tʜɪs ɪs not an Oᴘᴇɴ Sᴏᴜʀᴄᴇ Pʀᴏᴊᴇct
          so if you want this bot repo
-         contact 🔗 to bot owner 👨‍💻
-         
+         contact 🔗 to bot owner 👨‍💻\n\n
 Tʜɪs Bᴏᴛ ʜᴀs Lᴀᴛᴇsᴛ ᴀɴᴅ Aᴅᴠᴀɴᴄᴇᴅ Fᴇᴀᴛᴜʀᴇs⚡️
 you can add this bot in your group
-and get unlimited movies and web series
-
-special Thanks To our ❤️ Developer 😁
-
-Developer  [Owner of this bot]<a href='https://t.me/Madhuri_niranjan'> Madhuri niranjan </a>
-
-Bot channel <a href='https://t.me/Infinity_XBotz'> Infinity XBotz </a>
+and get unlimited movies and web series\n\n
+special Thanks To our ❤️ Developer 😁\n
+Developer  [Owner of this bot]\n<a href='https://t.me/Madhuri_niranjan'> Madhuri niranjan </a>
+\nBot channel <a href='https://t.me/Infinity_XBotz'> Infinity XBotz </a>
 """
 
 
@@ -170,7 +166,7 @@ Nᴀᴍᴇ - {}"""
 
     TOP_ALRT_MSG = """Cʜᴇᴄᴋɪɴɢ Fᴏʀ Mᴏᴠɪᴇ Iɴ Dᴀᴛᴀʙᴀsᴇ..."""
 
-    MELCOW_ENG = """<b>Hᴇʟʟᴏ {} 😍, Aɴᴅ Wᴇʟᴄᴏᴍᴇ Tᴏ {} Gʀᴏᴜᴘ ❤️</b>"""
+    MELCOW_ENG = """<b>Hᴇʟʟᴏ {} 😍, Wᴇʟᴄᴏᴍᴇ Tᴏ our {} Gʀᴏᴜᴘ ❤️\n watch this video to know how to open shareus link for download movies and web series from our group\n\n नमस्ते {} 😍, स्वागत है आपका हमारे {} ग्रुप में\n हमारे ग्रुप से मूवी और वेब सीरीज कैसे डाउनलोड की जाती है यह जानने के लिए इस विडियो को पूरा देखे।।</b>"""
 
     SHORTLINK_INFO = """
 
