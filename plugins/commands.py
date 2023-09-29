@@ -386,15 +386,7 @@ async def start(client, message):
             files_ = await get_file_details(file_id)
             files = files_[0]
             g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
-            k = await client.send_message(chat_id=message.from_user.id,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files.file_name}</code>\n\n"
-    f"🔗Sɪᴢᴇ ➠ : {get_size(files.file_size)}\n\n"
-    f"📂Fɪʟᴇ ʟɪɴᴋ ➠ : {g}\n\n"
-    f"<i>Note: This message is deleted in 20 mins to avoid copyrights. Save the link to Somewhere else</i>\n\n"
-    f"नोट: कॉपीराइट से बचने के लिए यह message 20 मिनट के बाद हटा दिया जाता है, इसलिए लिंक को saved messages या कहीं और forward करले।।\n\n"
-    f"📌<b>Important:</b> Click ❓How to Download button below to know how to open shareus link for downloading movies and web series from our infinity movie group.\n\n"
-    f"Thank you 🙏😌\n\n"
-    f"📌महत्वपूर्ण: हमारे infinity movie group से movie और webseries download कैसे करे, यह जानने के लिए नीचे दिए गए ❓How to Download button पर click करे।।\n\n"
-    f"धन्यवाद 🙏😌", reply_markup=InlineKeyboardMarkup(
+            k = await client.send_message(chat_id=message.from_user.id,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files.file_name}</code>\n\n🔗Sɪᴢᴇ ➠ : {get_size(files.file_size)}\n\n📂Fɪʟᴇ ʟɪɴᴋ ➠ : {g}\n\n<i>Note: This message is deleted in 20 mins to avoid copyrights. Save the link to Somewhere else</i>\n\nनोट: कॉपीराइट से बचने के लिए यह message 20 मिनट के बाद हटा दिया जाता है, इसलिए लिंक को saved messages या कहीं और forward करले।।\n\n📌<b>Important:</b> Click ❓How to Download button below to know how to open shareus link for downloading movies and web series from our infinity movie group.\n\nThank you 🙏😌\n\n📌महत्वपूर्ण: हमारे infinity movie group से movie और webseries download कैसे करे, यह जानने के लिए नीचे दिए गए ❓How to Download button पर click करे।।\n\nधन्यवाद 🙏😌", reply_markup=InlineKeyboardMarkup(
                     [
                        [
                             InlineKeyboardButton('📂Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ', url=g),
