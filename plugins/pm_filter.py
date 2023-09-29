@@ -95,11 +95,11 @@ async def pm_text(bot, message):
     await message.reply_text(
          text = f"<b>ʜᴇʏ {user} 😍,\n\n"
        f"ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs 🍿 ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ɪᴛ ɪɴ ᴏᴜʀ "
-       f"<a href=https://t.me/+Qn6fthcb7wI0ZTk1>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇\n\n"
+       f"<a href=https://t.me/+Qn6fthcb7wI0ZTk1>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ Movie group ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇\n\n"
        f"नमस्कार {user} 😍,\n\n"
        f"आपको यहां पर movie 🍿 नहीं मिलेगी कृपया हमारे "
        f"<a href=https://t.me/+Qn6fthcb7wI0ZTk1>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> में search 🔎 करें या "
-       f"नीचे ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ पर क्लिक करे 👇</b>",   
+       f"नीचे Movie group ʙᴜᴛᴛᴏɴ पर क्लिक करे 👇</b>",   
          reply_markup=InlineKeyboardMarkup([[
                                              InlineKeyboardButton("🎥Movie group", url="https://t.me/+Qn6fthcb7wI0ZTk1"),
                                              InlineKeyboardButton("👨‍💻support group ", url="https://t.me/Infinity_XBotz_support")
@@ -1510,7 +1510,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "admin":
         buttons = [[
             InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='help'),
-            InlineKeyboardButton('ᴇxᴛʀᴀ', callback_data='extramod')
+            InlineKeyboardButton('ᴇxᴛʀᴀ', callback_data='extra')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
