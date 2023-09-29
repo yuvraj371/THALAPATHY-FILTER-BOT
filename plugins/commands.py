@@ -368,12 +368,7 @@ async def start(client, message):
                 )
             )
             filesarr.append(msg)
-        k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️❗️❗️</u></b>\n\n"
-    f"This Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i>(Due to Copyright Issues)</i></b>.\n\n"
-    f"<b><i>Please forward these ALL Files/Videos to your Saved Messages and start the download there.</i></b>\n\n"
-    f"Thank you 🙏 😊\n\n"
-    f"नोट: कॉपीराइट से बचने के लिए यह 🗃️ file/video 10 मिनट के बाद हटा दिया जाता है, इसलिए 🗃️ file/video को saved messages या कहीं और forward करले\n\n"
-    f"धन्यवाद 🙏😌")
+        k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i>(Due to Copyright Issues)</i></b>.\n\n<b><i>Please forward these ALL Files/Videos to your Saved Messages and start the download there.</i></b>\n\nThank you 🙏 😊\n\nनोट: कॉपीराइट से बचने के लिए यह 🗃️ file/video 10 मिनट के बाद हटा दिया जाता है, इसलिए 🗃️ file/video को saved messages या कहीं और forward करले\n\nधन्यवाद 🙏😌")
         await asyncio.sleep(600)
         for x in filesarr:
             await x.delete()
@@ -464,12 +459,7 @@ async def start(client, message):
             btn = [[
                 InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
             ]]
-            k = await msg.reply(text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\n"
-    f"This Movie File/Video will be deleted in <b><u>10 mins</u> 🫥 <i>(Due to Copyright Issues)</i></b>.\n\n"
-    f"<b><i>Please forward this File/Video to your Saved Messages and start the download there.</i></b>\n\n"
-    f"Thank you 🙏 😊\n\n"
-    f"नोट: कॉपीराइट से बचने के लिए यह 🗃️ file/video 10 मिनट के बाद हटा दिया जाता है, इसलिए 🗃️ file/video को saved messages या कहीं और forward करले\n\n"
-    f"धन्यवाद 🙏😌",quote=True)
+            k = await msg.reply(text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie File/Video will be deleted in <b><u>10 mins</u> 🫥 <i>(Due to Copyright Issues)</i></b>.\n\n<b><i>Please forward this File/Video to your Saved Messages and start the download there.</i></b>\n\nThank you 🙏 😊\n\nनोट: कॉपीराइट से बचने के लिए यह 🗃️ file/video 10 मिनट के बाद हटा दिया जाता है, इसलिए 🗃️ file/video को saved messages या कहीं और forward करले\n\nधन्यवाद 🙏😌",quote=True)
             await asyncio.sleep(600)
             await msg.delete()
             await k.edit_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
@@ -521,12 +511,7 @@ async def start(client, message):
     btn = [[
         InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
     ]]
-    k = await msg.reply(text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\n"
-    f"This Movie File/Video will be deleted in <b><u>10 mins</u> 🫥 <i>(Due to Copyright Issues)</i></b>.\n\n"
-    f"<b><i>Please forward this File/Video to your Saved Messages and start the download there.</i></b>\n\n"
-    f"Thank you 🙏 😊\n\n"
-    f"नोट: कॉपीराइट से बचने के लिए यह 🗃️ file/video 10 मिनट के बाद हटा दिया जाता है, इसलिए 🗃️ file/video को saved messages या कहीं और forward करले\n\n"
-    f"धन्यवाद 🙏😌",quote=True)
+    k = await msg.reply(text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie File/Video will be deleted in <b><u>10 mins</u> 🫥 <i>(Due to Copyright Issues)</i></b>.\n\n<b><i>Please forward this File/Video to your Saved Messages and start the download there.</i></b>\n\nThank you 🙏 😊\n\nनोट: कॉपीराइट से बचने के लिए यह 🗃️ file/video 10 मिनट के बाद हटा दिया जाता है, इसलिए 🗃️ file/video को saved messages या कहीं और forward करले\n\nधन्यवाद 🙏😌",quote=True)
     await asyncio.sleep(600)
     await msg.delete()
     await k.edit_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
