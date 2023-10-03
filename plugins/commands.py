@@ -511,7 +511,7 @@ async def start(client, message):
                                 InlineKeyboardButton('🎥 Movie group', url="https://t.me/+Qn6fthcb7wI0ZTk1")
                             ],[
                                 InlineKeyboardButton("😇Bot owner😇", url="t.me/Madhuri_niranjan"),
-                                InlineKeyboardButtom("❤️Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ❤️", url=CHNL_LNK)
+                                InlineKeyboardButton("❤️Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ❤️", url=CHNL_LNK)
                             ],[   
                                 InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
                             ]
