@@ -1293,7 +1293,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await xo.delete()
 
             await log_msg.reply_text(
-                text=(script.STREAM_FEATURE.format(user_id, username, fileName, filesize)),
+                text=(script.STREAM_FEATURE.format(user_id, username, fileName, file_size)),
                 quote=True,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fast Download 🚀", url=lazy_download),  # we download Link
