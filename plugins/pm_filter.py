@@ -116,7 +116,7 @@ async def pm_text(bot, message):
     )
     await bot.send_message(
         chat_id=LOG_CHANNEL,
-        text=(script.PM_MSG.format(user, user_id, content))
+        text=(script.PM_MSG.format(username, user_id, content))
     )
 
 @Client.on_callback_query(filters.regex(r"^next"))
@@ -1293,7 +1293,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await xo.delete()
 
             await log_msg.reply_text(
-                text=(script.STREAM_FEATURE.format(user_id, username, fileName)),
+                text=(script.STREAM_FEATURE.format(user_id, username, fileName filesize)),
                 quote=True,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fast Download 🚀", url=lazy_download),  # we download Link
