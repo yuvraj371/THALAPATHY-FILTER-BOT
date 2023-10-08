@@ -1,6 +1,6 @@
 FROM python:3.10.8-slim-buster
 
-RUN apt install git -y && apt update && apt upgrade -y
+RUN apt update && apt install -y git
 COPY requirements.txt /
 
 RUN pip3 install -U pip && pip3 install -U -r requirements.txt
@@ -8,7 +8,7 @@ RUN pip3 install -U pip && pip3 install -U -r requirements.txt
 WORKDIR /Auto-search-tamil-bot
 
 # Make sure the service is running on port 8080
-EXPOSE 8080/tcp
+EXPOSE 8080
 
 # Copy the start.sh script and make it executable
 COPY start.sh /Auto-search-tamil-bot/start.sh
