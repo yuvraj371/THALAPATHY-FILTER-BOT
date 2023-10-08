@@ -8,7 +8,7 @@ RUN pip3 install -U pip && pip3 install -U -r requirements.txt
 WORKDIR /Auto-search-tamil-bot
 
 # Make sure the service is running on port 8080
-EXPOSE 8080
+EXPOSE 8080/tcp
 
 # Copy the start.sh script and make it executable
 COPY start.sh /Auto-search-tamil-bot/start.sh
