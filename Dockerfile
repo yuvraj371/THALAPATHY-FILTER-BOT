@@ -9,4 +9,5 @@ RUN mkdir /Auto-search-tamil-bot
 WORKDIR /Auto-search-tamil-bot
 EXPOSE 8080
 COPY start.sh /start.sh
+RUN chmod +x /start.sh
 CMD ["/start.sh"]
