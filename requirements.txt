@@ -9,8 +9,7 @@ pyrogram>=2.0.30
  git+https://github.com/Joelkb/cinemagoer 
  shortzy 
  datetime 
- pytz 
- aiohttp
+ pytz
 
 #---master---# 
  #Telethroid==0.0.10 
