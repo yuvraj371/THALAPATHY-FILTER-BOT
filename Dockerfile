@@ -1,18 +1,20 @@
-FROM python:3.10.8-slim-buster
+# Use an official Python runtime as a parent image
+FROM python:3.8-slim
 
-RUN apt update && apt install -y git
-COPY requirements.txt /
+# Set the working directory to /app
+WORKDIR /app
 
-RUN pip3 install -U pip && pip3 install -U -r requirements.txt
+# Copy the current directory contents into the container at /app
+COPY . /app
 
-WORKDIR /Auto-search-tamil-bot
+# Install any needed packages specified in requirements.txt
+RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
-# Make sure the service is running on port 8080
-EXPOSE 8080/tcp
+# Make port 80 available to the world outside this container
+EXPOSE 80
 
-# Copy the start.sh script and make it executable
-COPY start.sh /Auto-search-tamil-bot/start.sh
-RUN chmod +x /Auto-search-tamil-bot/start.sh
+# Define environment variable
+ENV NAME World
 
-# Run the start.sh script
-CMD ["/Auto-search-tamil-bot/start.sh"]
+# Run app.py when the container launches
+CMD ["python3", "bot.py"]
