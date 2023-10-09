@@ -1,6 +1,7 @@
 
 import sys
 import glob
+import database
 import importlib
 from pathlib import Path
 from pyrogram import idle
