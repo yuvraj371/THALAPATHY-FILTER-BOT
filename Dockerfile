@@ -1,13 +1,12 @@
-FROM python:3.8-slim
+FROM python:3.8-slim-buster
 
-WORKDIR /app
+RUN apt update && apt upgrade -y
+RUN apt install git -y
+COPY requirements.txt /requirements.txt
 
-COPY . /app
-
-RUN pip install --trusted-host pypi.python.org -r requirements.txt
-
-EXPOSE 80
-
-ENV NAME World
-
-CMD ["python3", "bot.py"]
+RUN cd /
+RUN pip3 install -U pip && pip3 install -U -r requirements.txt
+RUN mkdir /THALAPATHY-FILTER-BOT
+WORKDIR /THALAPATHY-FILTER-BOT
+COPY start.sh /start.sh
+CMD ["/bin/bash", "/start.sh"]
