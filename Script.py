@@ -20,9 +20,9 @@ Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b>"""
          contact 🔗 to bot owner 👨‍💻\n\n
 Tʜɪs Bᴏᴛ ʜᴀs Lᴀᴛᴇsᴛ ᴀɴᴅ Aᴅᴠᴀɴᴄᴇᴅ Fᴇᴀᴛᴜʀᴇs⚡️
 you can add this bot in your group
-and get unlimited movies and web series\n\n
+and get unlimited movies and web series\n
 special Thanks To our ❤️ Developer 😁\n
-Developer  [Owner of this bot]\n         <a href='https://t.me/Madhuri_niranjan'> Madhuri niranjan </a>
+Developer[Owner of this bot]<a href='https://t.me/Madhuri_niranjan'> Madhuri niranjan </a>
 \nBot channel <a href='https://t.me/Infinity_XBotz'> Infinity XBotz </a>
 """
 
