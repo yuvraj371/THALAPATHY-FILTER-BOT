@@ -70,10 +70,10 @@ async def give_filter(client, message):
             return await message.reply_text(
                         text = f"<b>Hᴇʏ {message.from_user.mention}, {str(total_results)} ʀᴇsᴜʟᴛs ᴀʀᴇ ғᴏᴜɴᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search}.\n\n"
        f"Tʜɪs ɪs ᴀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ, sᴏ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ғɪʟᴇs ғʀᴏᴍ ʜᴇʀᴇ...\n\n"
-       f"Jᴏɪɴ ᴀɴᴅ Sᴇᴀʀᴄʜ Hᴇʀᴇ - https://t.me/+Qn6fthcb7wI0ZTk1\n\n"
+       f"Jᴏɪɴ ᴀɴᴅ Sᴇᴀʀᴄʜ Hᴇʀᴇ - <a href='https://t.me/+Qn6fthcb7wI0ZTk1'> Movie group </a>"
        f"नमस्कार {message.from_user.mention}, आपकी request 🍿 {search} के लिए मेरे डेटाबेस में {str(total_results)} परिणाम मिले हैं।\n\n"
        f"लेकिन यह एक support group है, इसलिए आप यहां से मूवी 🍿 प्राप्त नहीं कर सकते...\n\n"
-       f"आपको मूवी हमारे मूवी 🍿 ग्रुप में मिलेगी, इसलिए वहां सर्च 🔍 करें - https://t.me/+Qn6fthcb7wI0ZTk1</b>",
+       f"आपको मूवी हमारे मूवी 🍿 ग्रुप में मिलेगी, इसलिए वहां सर्च 🔍 करें - <a href='https://t.me/+Qn6fthcb7wI0ZTk1'> Movie group </a></b>",
                         reply_markup=InlineKeyboardMarkup([[
                                                             InlineKeyboardButton("🎥Movie group", url="https://t.me/+Qn6fthcb7wI0ZTk1"),
                                                             InlineKeyboardButton("👨‍💻support group ", url="https://t.me/Infinity_XBotz_support")
