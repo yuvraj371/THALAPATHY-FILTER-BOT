@@ -383,7 +383,7 @@ async def start(client, message):
     elif data.startswith("files"):
         user = message.from_user.id
         if temp.SHORT.get(user)==None:
-            await message.reply_text(text="<b>Please Search Again in Group</b>")
+            await message.reply_text(text="<b>Please Search 🔍 Again in Group.\nGroup 🔗 link <a href='https://t.me/+Qn6fthcb7wI0ZTk1'> Click here </a>\n\n कृपया group में फिर से search 🔍 करे।\nGroup 🔗 link <a href='https://t.me/+Qn6fthcb7wI0ZTk1'> Click here </a> </b>")
         else:
             chat_id = temp.SHORT.get(user)
         settings = await get_settings(chat_id)
