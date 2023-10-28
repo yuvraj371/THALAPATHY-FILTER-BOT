@@ -80,7 +80,7 @@ MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
 AUTH_CHANNEL = environ.get('AUTH_CHANNEL', '-1001984741311')
-FQDN = environ.get('FQDN', 'srv31221116.ultasrv.net:8083')
+FQDN = environ.get('FQDN', 'srv31221116.ultasrv.net')
 
 LANGUAGES = ["malayalam", "mal", "tamil", "tam" ,"english", "eng", "hindi", "hin", "telugu", "tel", "kannada", "kan"]
 
@@ -98,8 +98,8 @@ else:
     ON_HEROKU = False
 BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
 FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
-URL = "https://srv31221116.ultasrv.net:8083".format(FQDN) if ON_HEROKU or NO_PORT else \
-    "https://srv31221116.ultasrv.net:8083/".format(FQDN, PORT)
+URL = "https://srv31221116.ultasrv.net".format(FQDN) if ON_HEROKU or NO_PORT else \
+    "https://srv31221116.ultasrv.net/".format(FQDN, PORT)
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
 WORKERS = int(environ.get('WORKERS', '4'))
 SESSION_NAME = str(environ.get('SESSION_NAME', 'LazyBot'))
@@ -114,9 +114,9 @@ else:
     ON_HEROKU = False
 HAS_SSL=bool(getenv('HAS_SSL',False))
 if HAS_SSL:
-    URL = "https://srv31221116.ultasrv.net:8083/".format(FQDN)
+    URL = "https://srv31221116.ultasrv.net/".format(FQDN)
 else:
-    URL = "https://srv31221116.ultasrv.net:8083/".format(FQDN)
+    URL = "https://srv31221116.ultasrv.net/".format(FQDN)
 
 
 
