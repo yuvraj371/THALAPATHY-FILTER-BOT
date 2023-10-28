@@ -55,7 +55,7 @@ IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "8")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
-PORT = environ.get("PORT", "8080")
+PORT = environ.get("PORT", "8081")
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+Qn6fthcb7wI0ZTk1')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/Infinity_XBotz')
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Infinity_XBotz/5')
@@ -80,7 +80,7 @@ MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
 AUTH_CHANNEL = environ.get('AUTH_CHANNEL', '-1001984741311')
-FQDN = environ.get('FQDN', 'colorful-carlynn-newsagency.koyeb.app')
+FQDN = environ.get('FQDN', 'srv31221116.ultasrv.net')
 
 LANGUAGES = ["malayalam", "mal", "tamil", "tam" ,"english", "eng", "hindi", "hin", "telugu", "tel", "kannada", "kan"]
 
@@ -98,8 +98,8 @@ else:
     ON_HEROKU = False
 BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
 FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
-URL = "https://colorful-carlynn-newsagency.koyeb.app".format(FQDN) if ON_HEROKU or NO_PORT else \
-    "https://colorful-carlynn-newsagency.koyeb.app/".format(FQDN, PORT)
+URL = "https://srv31221116.ultasrv.net".format(FQDN) if ON_HEROKU or NO_PORT else \
+    "https://srv31221116.ultasrv.net/".format(FQDN, PORT)
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
 WORKERS = int(environ.get('WORKERS', '4'))
 SESSION_NAME = str(environ.get('SESSION_NAME', 'LazyBot'))
@@ -114,9 +114,9 @@ else:
     ON_HEROKU = False
 HAS_SSL=bool(getenv('HAS_SSL',False))
 if HAS_SSL:
-    URL = "https://colorful-carlynn-newsagency.koyeb.app/".format(FQDN)
+    URL = "https://srv31221116.ultasrv.net/".format(FQDN)
 else:
-    URL = "https://colorful-carlynn-newsagency.koyeb.app/".format(FQDN)
+    URL = "https://srv31221116.ultasrv.net/".format(FQDN)
 
 
 
