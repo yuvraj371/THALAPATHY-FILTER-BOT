@@ -96,8 +96,8 @@ if 'DYNO' in environ:
     APP_NAME = environ.get('APP_NAME')
 else:
     ON_HEROKU = False
-BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '181.214.152.133'))
-FQDN = str(getenv('FQDN', 'BIND_ADRESS:PORT')) if not ON_HEROKU or getenv('FQDN', '181.214.152.133:49152') else APP_NAME+'.herokuapp.com'
+    BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '181.214.152.133'))
+    FQDN = str(getenv('FQDN', 'BIND_ADRESS:PORT')) if not ON_HEROKU or getenv('FQDN', '181.214.152.133:49152') else APP_NAME + '.herokuapp.com'
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
 WORKERS = int(environ.get('WORKERS', '4'))
 SESSION_NAME = str(environ.get('SESSION_NAME', 'LazyBot'))
@@ -115,6 +115,7 @@ else:
         URL = "https://{}/".format(FQDN)
     else:
         URL = "http://{}/".format(FQDN)
+  
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
