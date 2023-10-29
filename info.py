@@ -99,8 +99,8 @@ else:
 
 BIND_ADDRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '181.214.152.133'))
 FQDN = str(getenv('FQDN', BIND_ADDRESS)) if not ON_HEROKU else APP_NAME + '.herokuapp.com'
-URL = f"https://advance-auto-filter-bot-ql8l.onrender.com/{FQDN}" if ON_HEROKU or NO_PORT else \
-    f"https://advance-auto-filter-bot-ql8l.onrender.com/{FQDN}:{PORT}"
+URL = f"https://181.214.152.133:49152.com/{FQDN}" if ON_HEROKU or NO_PORT else \
+    f"https://181.214.152.133:49152.com/{FQDN}:{PORT}"
 
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
 WORKERS = int(environ.get('WORKERS', '4'))
@@ -111,9 +111,9 @@ PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
 HAS_SSL = bool(getenv('HAS_SSL', False))
 
 if HAS_SSL:
-    URL = f"https://advance-auto-filter-bot-ql8l.onrender.com/{FQDN}"
+    URL = f"181.214.152.133:49152.com/{FQDN}"
 else:
-    URL = f"http://advance-auto-filter-bot-ql8l.onrender.com/{FQDN}"
+    URL = f"181.214.152.133:49152.com/{FQDN}"
 
   
 
