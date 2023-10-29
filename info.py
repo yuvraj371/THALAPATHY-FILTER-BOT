@@ -80,7 +80,7 @@ MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
 AUTH_CHANNEL = environ.get('AUTH_CHANNEL', '-1001984741311')
-FQDN = environ.get('FQDN', '181.214.152.133:49152')
+FQDN = environ.get('FQDN', 'srv31221116.ultasrv.net:49152')
 
 LANGUAGES = ["malayalam", "mal", "tamil", "tam" ,"english", "eng", "hindi", "hin", "telugu", "tel", "kannada", "kan"]
 
@@ -96,7 +96,7 @@ else:
     ON_HEROKU = False
 
 BIND_ADDRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '181.214.152.133'))
-FQDN = str(getenv('FQDN', '181.214.152.133:49152')) if not ON_HEROKU else APP_NAME + '.herokuapp.com'
+FQDN = str(getenv('FQDN', 'srv31221116.ultasrv.net:49152')) if not ON_HEROKU else APP_NAME + '.herokuapp.com'
 URL = f"https://{FQDN}/" if ON_HEROKU or NO_PORT else f"http://{FQDN}/"
 
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
