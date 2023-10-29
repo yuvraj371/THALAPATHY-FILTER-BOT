@@ -98,9 +98,9 @@ else:
     ON_HEROKU = False
 
 BIND_ADDRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '181.214.152.133'))
-FQDN = str(getenv('FQDN', BIND_ADDRESS)) if not ON_HEROKU else APP_NAME + '.herokuapp.com'
-URL = f"https://181.214.152.133:49152.com/{FQDN}" if ON_HEROKU or NO_PORT else \
-    f"https://181.214.152.133:49152.com/{FQDN}:{PORT}"
+FQDN = str(getenv('FQDN', '181.214.152.133:49152')) if not ON_HEROKU else APP_NAME + '.herokuapp.com'
+URL = f"https://{}/".format(FQDN) if ON_HEROKU or NO_PORT else \
+      f"http://{}/".format(FQDN)
 
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
 WORKERS = int(environ.get('WORKERS', '4'))
@@ -111,9 +111,9 @@ PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
 HAS_SSL = bool(getenv('HAS_SSL', False))
 
 if HAS_SSL:
-    URL = f"181.214.152.133:49152.com/{FQDN}"
+    URL = "https://{}/".format(FQDN)
 else:
-    URL = f"181.214.152.133:49152.com/{FQDN}"
+    URL = "http://{}/".format(FQDN)
 
   
 
