@@ -109,8 +109,8 @@ if 'DYNO' in environ:
     APP_NAME = str(getenv('APP_NAME'))
 else:
     ON_HEROKU = False
-FQDN = str(getenv('FQDN', 'BIND_ADRESS:PORT')) if not ON_HEROKU or getenv('FQDN', '181.214.152.133:49152') else APP_NAME+'.herokuapp.com'
-    HAS_SSL=bool(getenv('HAS_SSL',False))
+    FQDN = str(getenv('FQDN', 'BIND_ADRESS:PORT')) if not ON_HEROKU or getenv('FQDN', '181.214.152.133:49152') else APP_NAME+'.herokuapp.com'
+    HAS_SSL = bool(getenv('HAS_SSL', False))
     if HAS_SSL:
         URL = "https://{}/".format(FQDN)
     else:
