@@ -86,8 +86,6 @@ LANGUAGES = ["malayalam", "mal", "tamil", "tam" ,"english", "eng", "hindi", "hin
 
 SEASONS = ["season 1" , "season 2" , "season 3" , "season 4", "season 5" , "season 6" , "season 7" , "season 8" , "season 9" , "season 10"]
 
-
-
 # Online Stream and Download
 NO_PORT = bool(environ.get('NO_PORT', False))
 APP_NAME = None
@@ -99,8 +97,7 @@ else:
 
 BIND_ADDRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '181.214.152.133'))
 FQDN = str(getenv('FQDN', '181.214.152.133:49152')) if not ON_HEROKU else APP_NAME + '.herokuapp.com'
-URL = f"https://{}/".format(FQDN) if ON_HEROKU or NO_PORT else \
-      f"http://{}/".format(FQDN)
+URL = f"https://{FQDN}/" if ON_HEROKU or NO_PORT else f"http://{FQDN}/"
 
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
 WORKERS = int(environ.get('WORKERS', '4'))
@@ -111,11 +108,9 @@ PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
 HAS_SSL = bool(getenv('HAS_SSL', False))
 
 if HAS_SSL:
-    URL = "https://{}/".format(FQDN)
+    URL = f"https://{FQDN}/"
 else:
-    URL = "http://{}/".format(FQDN)
-
-  
+    URL = f"http://{FQDN}/"
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
