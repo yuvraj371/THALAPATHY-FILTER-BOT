@@ -98,8 +98,8 @@ else:
     ON_HEROKU = False
 BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '181.214.152.133'))
 FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+''
-URL = "https://{}/".format(FQDN) if ON_HEROKU or NO_PORT else \
-    "http://{}:{}/".format(FQDN, PORT)
+URL = "https://181.214.152.133:49152.com".format(FQDN) if ON_HEROKU or NO_PORT else \
+    "https://181.214.152.133:49152.com/".format(FQDN, PORT)
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
 WORKERS = int(environ.get('WORKERS', '4'))
 SESSION_NAME = str(environ.get('SESSION_NAME', 'LazyBot'))
@@ -114,9 +114,9 @@ else:
     ON_HEROKU = False
 HAS_SSL=bool(getenv('HAS_SSL',False))
 if HAS_SSL:
-        URL = "https://{}/".format(FQDN)
+            URL = "https://181.214.152.133:49152.com/".format(FQDN)
 else:
-        URL = "http://{}/".format(FQDN)
+            URL = "https://181.214.152.133:49152.com/".format(FQDN)
 
 
 
