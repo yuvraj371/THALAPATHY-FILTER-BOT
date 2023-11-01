@@ -82,6 +82,9 @@ try:
             invite_link2 = await client.create_chat_invite_link(int(SECOND_CHANNEL))
         except ChatAdminRequired:
             logger.error("Make sure Bot is admin in Forcesub channels")
+        finally:
+            # Close the file, even if an exception occurs
+            f.close()
             return
 
         btn = [
@@ -114,6 +117,9 @@ try:
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
         )
+        finally:
+            # Close the file, even if an exception occurs
+            f.close()
 
     # Message for "Why I Am Joining?" button
 sinfo_message = """🫣 This is our backup channel and movie 🍿 channel. If Telegram bans our group, the link of new group will be available here, and on the second channel, you can get movies in high quality😄.\n\nयह हमारे बैकअप और मूवी चैनल है। अगर टेलीग्राम हमारे ग्रुप को बैन कर देता है, तो नए ग्रुप की लिंक यहां मिलेगी और दूसरे चैनल से आप मूवी को high quality में देख सकते है।😅"""
