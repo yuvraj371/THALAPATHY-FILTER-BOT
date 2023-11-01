@@ -34,8 +34,6 @@ AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '5787509903').split()]
 auth_channel = environ.get('AUTH_CHANNEL')
 auth_grp = environ.get('AUTH_GROUP')
-FIRST_CHANNEL = int(first_channel) if first_channel and id_pattern.search(first_channel) else None
-SECOND_CHANNEL = int(second_channel) if second_channel and id_pattern.search(second_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1001904441794')
 reqst_channel = environ.get('REQST_CHANNEL_ID', '-1001976724940')
@@ -84,8 +82,8 @@ PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
 FIRST_CHANNEL = environ.get('FIRST_CHANNEL', '-1001984741311')
 SECOND_CHANNEL = environ.get('SECOND_CHANNEL', '-1001992981386')
 FQDN = environ.get('FQDN', 'srv31221116.ultasrv.net:49152')
-first_channel = "-1001984741311" 
-second_channel = "-1001992981386"  
+first_channel = environ.get('FIRST_CHANNEL', '-1001984741311')
+second_channel = environ.get('SECOND_CHANNEL', '-1001992981386')
 
 LANGUAGES = ["malayalam", "mal", "tamil", "tam" ,"english", "eng", "hindi", "hin", "telugu", "tel", "kannada", "kan"]
 
