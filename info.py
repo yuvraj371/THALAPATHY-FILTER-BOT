@@ -84,6 +84,8 @@ PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
 FIRST_CHANNEL = environ.get('FIRST_CHANNEL', '-1001984741311')
 SECOND_CHANNEL = environ.get('SECOND_CHANNEL', '-1001992981386')
 FQDN = environ.get('FQDN', 'srv31221116.ultasrv.net:49152')
+first_channel = "-1001984741311" 
+second_channel = "-1001992981386"  
 
 LANGUAGES = ["malayalam", "mal", "tamil", "tam" ,"english", "eng", "hindi", "hin", "telugu", "tel", "kannada", "kan"]
 
