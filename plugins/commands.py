@@ -93,7 +93,7 @@ try:
                 InlineKeyboardButton("❤️ Movie channel ❤️", url=invite_link2.invite_link),
             ],
             [
-                InlineKeyboardButton('🤔 Why I Am Joining? 🤔', callback_data='sinfo')
+                InlineKeyboardButton('🤔 Why I Am Joining? 🤔', url='https://telegram.me/Infinity_XBotz')
             ]
         ]
 
@@ -117,17 +117,6 @@ try:
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
         )
-def sinfo():
-    sinfo_message = """🫣 This is our backup channel and movie 🍿 channel. If Telegram bans our group, the link of new group will be available here, and on the second channel, you can get movies in high quality😄.\n\nयह हमारे बैकअप और मूवी चैनल है। अगर टेलीग्राम हमारे ग्रुप को बैन कर देता है, तो नए ग्रुप की लिंक यहां मिलेगी और दूसरे चैनल से आप मूवी 
-को high quality में देख सकते है।😅"""
-
-    try:
-        # Code that you want to execute
-    except:
-        pass
-    finally:
-        # Code that you want to execute after the try block has finished executing, regardless of whether or not an exception occurred
-        f.close()
 
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
