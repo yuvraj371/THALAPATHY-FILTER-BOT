@@ -58,9 +58,9 @@ async def start(client, message):
             InlineKeyboardButton('❓How to Download', url="https://t.me/Infinity_XBotz/5"),
             InlineKeyboardButton('😇Bot owner😇', url="https://telegram.me/Madhuri_niranjan")
         ], [
-            InlineKeyboardButton('❤️ Jᴏɪᴎ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ❤️', url=CHNL_LNK)
+            InlineKeyboardButton('❤️ Join Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ❤️', url=CHNL_LNK)
         ], [
-            InlineKeyboardButton('❤️ Jᴏɪн Movie Cʜᴀɴɴᴇλ ❤️', url=CHNL2_LNK)
+            InlineKeyboardButton('❤️ Jᴏɪn Movie Cʜᴀɴɴᴇl ❤️', url=CHNL2_LNK)
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         m = await message.reply_sticker("CAACAgUAAxkBAAEBvlVk7YKnYxIHVnKW2PUwoibIR2ygGAACBAADwSQxMYnlHW4Ls8gQHgQ") 
@@ -102,7 +102,6 @@ try:
                 btn.append([InlineKeyboardButton("↻ Try Again", callback_data=f"checksub#{kk}#{file_id}")])
             except (IndexError, ValueError):
                 btn.append([InlineKeyboardButton("↻ Try Again", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
-
         await client.send_photo(
             chat_id=message.from_user.id,
             photo="https://telegra.ph/file/20b4aaaddb8aba646e53c.jpg",
@@ -116,60 +115,26 @@ try:
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
         )
-
-@Client.on_message(filters.command("start") & filters.incoming)
-async def start(client, message):
-    if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
+        return
+    if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-                      InlineKeyboardButton('👻 Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ 👻', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-                   ],[
-                      InlineKeyboardButton('👨‍💻Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url="https://t.me/Infinity_XBotz_support"),
-                      InlineKeyboardButton('🎬 Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url='https://t.me/+Qn6fthcb7wI0ZTk1')
-                   ],[
-                      InlineKeyboardButton('❓How to Download', url="https://t.me/Infinity_XBotz/5"), 
-                      InlineKeyboardButton('😇Bot owner😇', url="https://t.me/Madhuri_niranjan")
-                   ],[
-                      InlineKeyboardButton('❤️ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ❤️', url=CHNL_LNK)
-                   ],[
-                      InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
+                    InlineKeyboardButton('👻 Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ 👻', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                ],[
+                    InlineKeyboardButton('Eᴀʀɴ Mᴏɴᴇʏ 💸', callback_data="shortlink_info"),
+                    InlineKeyboardButton('🎬 Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url='https://t.me/+xbjscan3sfo4YzA1')
+                ],[
+                    InlineKeyboardButton('⛅ Hᴇʟᴘ', callback_data='help'),
+                    InlineKeyboardButton('👽 Aʙᴏᴜᴛ', callback_data='about')
+                ],[
+                    InlineKeyboardButton('❤️ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ❤️', url=CHNL_LNK)
                   ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup, disable_web_page_preview=True)
-        await asyncio.sleep(2)
-        if not await db.get_chat(message.chat.id):
-            total=await client.get_chat_members_count(message.chat.id)
-            await client.send_message(LOG_CHANNEL, script.LOG_TEXT_G.format(message.chat.title, message.chat.id, total, "Unknown"))
-            await db.add_chat(message.chat.id, message.chat.title)
-        return 
-    if not await db.is_user_exist(message.from_user.id):
-        await db.add_user(message.from_user.id, message.from_user.first_name)
-        await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
-    if len(message.command) != 2:
-        buttons = [[
-                      InlineKeyboardButton('👻 Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ 👻', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-                   ],[
-                      InlineKeyboardButton('👨‍💻support group', url="https://telegram.me/Infinity_XBotz_support"),
-                      InlineKeyboardButton('🎬 Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url='https://t.me/+Qn6fthcb7wI0ZTk1')
-                   ],[
-                      InlineKeyboardButton('⛅ Hᴇʟᴘ', callback_data='help'),
-                      InlineKeyboardButton('👽 Aʙᴏᴜᴛ', callback_data='about')
-                   ],[
-                      InlineKeyboardButton('❓How to Download', url="https://t.me/Infinity_XBotz/5"),
-                      InlineKeyboardButton('😇Bot owner😇', url="https://telegram.me/Madhuri_niranjan")
-                   ],[
-                      InlineKeyboardButton('❤️ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ❤️', url=CHNL_LNK)
-                   ],[
-                      InlineKeyboardButton('❤️ Jᴏɪн Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
-                  ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        m = await message.reply_sticker("CAACAgUAAxkBAAEBvlVk7YKnYxIHVnKW2PUwoibIR2ygGAACBAADwSQxMYnlHW4Ls8gQHgQ") 
-        await asyncio.sleep(1)
-        await m.delete()
+        reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
             photo=random.choice(PICS),
-            caption=script.START_TXT.format(message.from_user.mention, temp.U
-
-                                            
+            caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )                                  
         return
     data = message.command[1]
     try:
