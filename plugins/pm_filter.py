@@ -81,7 +81,8 @@ async def give_filter(client, message):
                                                             InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz"),
                                                             InlineKeyboardButton("😇Bot owner😇 ", url="https://t.me/Madhuri_niranjan")
                                                          ],[
-                                                            InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5")
+                                                            InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5"),
+                                                            InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
                                                           ]])
           )
             
@@ -107,7 +108,8 @@ async def pm_text(bot, message):
                                              InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz"),
                                              InlineKeyboardButton("😇Bot owner😇 ", url="https://t.me/Madhuri_niranjan")
                                           ],[
-                                             InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5")
+                                             InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5"),
+                                             InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
                                            ]])
     )
     await bot.send_message(
@@ -918,7 +920,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
     
     elif query.data.startswith("checksub"):
-        if AUTH_CHANNEL and not await is_subscribed(client, query):
+        if FIRST_CHANNEL and SECOND_CHANNEL and not await is_subscribed(client, query):
             await query.answer("Jᴏɪɴ ᴏᴜʀ Bᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ! 😒", show_alert=True)
             return
         ident, kk, file_id = query.data.split("#")
@@ -1328,7 +1330,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('❓How to Download', url="https://t.me/Infinity_XBotz/5"),
                     InlineKeyboardButton('😇Bot owner😇', url="https://telegram.me/Madhuri_niranjan")
                 ],[
-                    InlineKeyboardButton('❤️ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ❤️', url=CHNL_LNK)
+                    InlineKeyboardButton('❤️ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ❤️', url=CHNL_LNK),
+                    InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
                   ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
