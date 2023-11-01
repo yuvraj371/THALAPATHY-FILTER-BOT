@@ -116,7 +116,7 @@ try:
         )
 
 # Message for "Why I Am Joining?" button
-sinfo_message = """This is our backup channel and movie channel. If Telegram bans our group, the link of new group will be available here and on the second channel, you can get movies in high quality.\n\nयह हमारे बैकअप और मूवी चैनल है। अगर टेलीग्राम हमारे ग्रुप को बैन कर देता है, तो नए ग्रुप की लिंक यहां मिलेगी और दूसरे चैनल से आप मूवी को high quality में देख सकते है।😅"""
+sinfo_message = """This is our backup channel and movie channel. If Telegram bans our group, the link to the new group will be available here, and on the second channel, you can get movies in high quality.\n\nयह हमारे बैकअप और मूवी चैनल है। अगर टेलीग्राम हमारे ग्रुप को बैन कर देता है, तो नए ग्रुप की लिंक यहां मिलेगी और दूसरे चैनल से आप मूवी को high quality में देख सकते है।😅"""
 
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
