@@ -411,7 +411,7 @@ sinfo_message = """🫣 This is our backup channel and movie 🍿 channel. If Te
     elif data.startswith("files"):
         user = message.from_user.id
         if temp.SHORT.get(user)==None:
-            await message.reply_text(text="Please Search 🔍 Again in Group.\nGroup 🔗 link [Click here](https://t.me/+Qn6fthcb7wI0ZTk1)\n\nकृपया group में फिर से search 🔍 करें।\nGroup 🔗 link [Click here](https://t.me/+Qn6fthcb7wI0ZTk1)") 
+            await message.reply_text(text="<b>Please Search Again in Group</b>") 
         else:
             chat_id = temp.SHORT.get(user)
         settings = await get_settings(chat_id)
