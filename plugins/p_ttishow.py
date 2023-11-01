@@ -44,7 +44,8 @@ async def save_group(bot, message):
                     InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5"),                                                  
                     InlineKeyboardButton("😇Bot owner😇 ", url="https://t.me/Madhuri_niranjan")                                                     
                  ],[
-                    InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz")
+                    InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz"),
+                    InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
                   ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -70,7 +71,8 @@ async def save_group(bot, message):
                                                                            InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5"),
                                                                            InlineKeyboardButton("😇Bot owner😇 ", url="https://t.me/Madhuri_niranjan")
                                                                         ],[
-                                                                           InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz")
+                                                                           InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz"),
+                                                                           InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
                                                                          ]]
                                                  ),
                                                  parse_mode=enums.ParseMode.HTML
@@ -101,7 +103,8 @@ async def leave_a_chat(bot, message):
                     InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5"),                                                  
                     InlineKeyboardButton("😇Bot owner😇 ", url="https://t.me/Madhuri_niranjan")                                                     
                  ],[
-                    InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz")
+                    InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz"),
+                    InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
                   ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
