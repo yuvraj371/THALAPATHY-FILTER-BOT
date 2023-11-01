@@ -8,7 +8,7 @@ from pyrogram.errors import ChatAdminRequired, FloodWait
 from pyrogram.types import *
 from database.ia_filterdb import Media, get_file_details, unpack_new_file_id, get_bad_files
 from database.users_chats_db import db
-from info import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, CHNL_LNK, GRP_LNK, REQST_CHANNEL, SUPPORT_CHAT_ID, SUPPORT_CHAT, MAX_B_TN, VERIFY, SHORTLINK_API, SHORTLINK_URL, TUTORIAL, IS_TUTORIAL, PREMIUM_USER
+from info import CHANNELS, ADMINS, FIRST_CHANNEL, SECOND CHANNEL, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, CHNL_LNK, CHNL2_LNK, GRP_LNK, REQST_CHANNEL, SUPPORT_CHAT_ID, SUPPORT_CHAT, MAX_B_TN, VERIFY, SHORTLINK_API, SHORTLINK_URL, TUTORIAL, IS_TUTORIAL, PREMIUM_USER
 from utils import get_settings, get_size, is_subscribed, save_group_settings, temp, verify_user, check_token, check_verification, get_token, get_shortlink, get_tutorial
 from database.connections_mdb import active_connection
 # from plugins.pm_filter import ENABLE_SHORTLINK
@@ -32,6 +32,8 @@ async def start(client, message):
                       InlineKeyboardButton('😇Bot owner😇', url="https://t.me/Madhuri_niranjan")
                    ],[
                       InlineKeyboardButton('❤️ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ❤️', url=CHNL_LNK)
+                   ],[
+                      InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup, disable_web_page_preview=True)
@@ -58,6 +60,8 @@ async def start(client, message):
                       InlineKeyboardButton('😇Bot owner😇', url="https://telegram.me/Madhuri_niranjan")
                    ],[
                       InlineKeyboardButton('❤️ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ❤️', url=CHNL_LNK)
+                   ],[
+                      InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_sticker("CAACAgUAAxkBAAEBvlVk7YKnYxIHVnKW2PUwoibIR2ygGAACBAADwSQxMYnlHW4Ls8gQHgQ") 
@@ -72,32 +76,44 @@ async def start(client, message):
         return
     
     if AUTH_CHANNEL and not await is_subscribed(client, message):
-        try:
-            invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
-        except ChatAdminRequired:
-            logger.error("Make sure Bot is admin in Forcesub channel")
-            return
-        btn = [
-            [
-                InlineKeyboardButton("❤️ Jᴏɪɴ Oᴜʀ Cʜᴀɴɴᴇʟ ❤️", url=invite_link.invite_link)
-            ],[
-                InlineKeyboardButton('🤔 Why Iam Join🤔', callback_data='sinfo')
-            ]
-        ]
+        try:if AUTH_CHANNEL and not await is_subscribed(client, message):
+    try:
+        invite_link1 = await client.create_chat_invite_link(int(FIRST_CHANNEL))
+        invite_link2 = await client.create_chat_invite_link(int(SECOND_CHANNEL))
+    except ChatAdminRequired:
+        logger.error("Make sure Bot is admin in Forcesub channels")
+        return
 
-        if message.command[1] != "subscribe":
-            try:
-                kk, file_id = message.command[1].split("_", 1)
-                btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", callback_data=f"checksub#{kk}#{file_id}")])
-            except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
-        await client.send_photo(
-            chat_id=message.from_user.id,
-            photo="https://telegra.ph/file/20b4aaaddb8aba646e53c.jpg",
-            caption = "**You are not in our channel given below, so you won't receive the movie file...\n\nIf you want the movie file, click on the '🍿ᴊᴏɪɴ ᴏᴜʀ ʙᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ🍿' button below and join our back-up channel, then click on the '🔄 Try Again' button below...\n\nThen you will get the movie files...**\n\n**आप हमारे Bot channel join में add नहीं हैं, इसलिए आपको मूवी फ़ाइल नहीं मिल पाएंगी...\n\nयदि आप मूवी फ़ाइल चाहते हैं, तो नीचे '🍿ᴊᴏɪɴ ᴏᴜʀ ʙᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ🍿' बटन पर क्लिक करें और हमारे बैक-अप चैनल से जुड़ें, फिर नीचे '🔄 Try again' बटन पर क्लिक करें...\n\nउसके बाद आपको आपकी मूवी फ़ाइलें मिल जाएंगी।।...**",
-            reply_markup=InlineKeyboardMarkup(btn),
-            parse_mode=enums.ParseMode.MARKDOWN
-            )
+    btn = [
+        [
+            InlineKeyboardButton("❤️ Updates channel ❤️", url=invite_link1.invite_link),
+            InlineKeyboardButton("❤️ Movie channel ❤️", url=invite_link2.invite_link),
+        ],
+        [
+            InlineKeyboardButton('🤔 Why I Am Joining? 🤔', callback_data='sinfo')
+        ]
+    ]
+
+    if message.command[1] != "subscribe":
+        try:
+            kk, file_id = message.command[1].split("_", 1)
+            btn.append([InlineKeyboardButton("↻ Try Again", callback_data=f"checksub#{kk}#{file_id}")])
+        except (IndexError, ValueError):
+            btn.append([InlineKeyboardButton("↻ Try Again", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+
+    await client.send_photo(
+        chat_id=message.from_user.id,
+        photo="https://telegra.ph/file/20b4aaaddb8aba646e53c.jpg",
+        caption="**You are not in one of our channels, so you won't receive the movie file...\n\n"
+                "If you want the movie file, click on the '❤️ Join Channel' buttons below and join one of our channels, "
+                "then click on the '↻ Try Again' button below...\n\n"
+                "Then you will get the movie files...**",
+        reply_markup=InlineKeyboardMarkup(btn),
+        parse_mode=enums.ParseMode.MARKDOWN
+    )
+
+# Message for "Why I Am Joining?" button
+sinfo_message = """🫣 This is our backup channel and movie 🍿 channel. If Telegram bans our group, the link to the new group will be available here and on second channel you can get movies in high quality😄.\n\nयह हमारे बैकअप और मूवी चैनल है। अगर टेलीग्राम हमारे ग्रुप को बैन कर देता है, तो नए ग्रुप की लिंक यहां मिलेगी और दूसरे चैनल से आप मूवी को high quality में देख सकते है।😅"""
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
@@ -113,6 +129,8 @@ async def start(client, message):
                       InlineKeyboardButton('😇Bot owner', url="https://telegram.me/Madhuri_niranjan")
                    ],[
                       InlineKeyboardButton('❤️ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ❤️', url=CHNL_LNK)
+                   ],[
+                      InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
@@ -170,6 +188,8 @@ async def start(client, message):
                                 InlineKeyboardButton('😇Bot owner😇', url="https://t.me/Madhuri_niranjan"),
                                 InlineKeyboardButton('❤️Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ❤️', url=CHNL_LNK)
                             ],[
+                                InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
+                            ],[
                                 InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
                             ]
                         ]
@@ -191,7 +211,9 @@ async def start(client, message):
                             ],[
                                 InlineKeyboardButton("😇Bot owner😇", url="t.me/Madhuri_niranjan"),
                                 InlineKeyboardButton("❤️Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ❤️", url=CHNL_LNK)
-                            ],[   
+                            ],[
+                                InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
+                            ],[
                                 InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
                             ]
                         ]
@@ -284,6 +306,8 @@ async def start(client, message):
                     ], [
                         InlineKeyboardButton('😇Bot owner😇', url="https://telegram.me/Madhuri_niranjan"),                        
                         InlineKeyboardButton('❤️Update channel❤️', url=CHNL_LNK)
+                    ], [
+                        InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
                     ]
                 ]
             )
@@ -310,6 +334,8 @@ async def start(client, message):
                     ], [
                         InlineKeyboardButton('😇Bot owner😇', url="https://telegram.me/Madhuri_niranjan"),                        
                         InlineKeyboardButton('❤️Update channel❤️', url=CHNL_LNK)
+                    ], [
+                        InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
                     ]
                 ]
             )
@@ -361,6 +387,8 @@ async def start(client, message):
                             ],[
                                 InlineKeyboardButton("😇Bot owner😇", url="t.me/Madhuri_niranjan"),
                                 InlineKeyboardButton("❤️Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ❤️", url=CHNL_LNK)
+                            ],[
+                                InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
                             ],[   
                                 InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
                             ]
@@ -410,6 +438,8 @@ async def start(client, message):
                        ],[
                             InlineKeyboardButton('😇Bot owner😇', url="https://telegram.me/Madhuri_niranjan"),                        
                             InlineKeyboardButton('❤️Update channel❤️', url=CHNL_LNK)
+                       ],[
+                            InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
                        ]                  
                     ]
                 )
@@ -444,6 +474,8 @@ async def start(client, message):
                             ],[
                                 InlineKeyboardButton("😇Bot owner😇", url="t.me/Madhuri_niranjan"),
                                 InlineKeyboardButton("❤️ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ❤️", url=CHNL_LNK)
+                            ],[
+                                InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
                             ],[   
                                 InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
                             ]
@@ -512,6 +544,8 @@ async def start(client, message):
                             ],[
                                 InlineKeyboardButton("😇Bot owner😇", url="t.me/Madhuri_niranjan"),
                                 InlineKeyboardButton("❤️Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ❤️", url=CHNL_LNK)
+                            ],[
+                                InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
                             ],[   
                                 InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
                             ]
