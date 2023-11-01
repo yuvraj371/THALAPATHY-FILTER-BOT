@@ -74,46 +74,46 @@ async def start(client, message):
             parse_mode=enums.ParseMode.HTML
         )
         return
-    
-    try:
+
+try:
     if FIRST_CHANNEL and SECOND_CHANNEL and not await is_subscribed(client, message):
-    try:
-        invite_link1 = await client.create_chat_invite_link(int(FIRST_CHANNEL))
-        invite_link2 = await client.create_chat_invite_link(int(SECOND_CHANNEL))
-    except ChatAdminRequired:
-        logger.error("Make sure Bot is admin in Forcesub channels")
-        return
-
-    btn = [
-        [
-            InlineKeyboardButton("❤️ Updates channel ❤️", url=invite_link1.invite_link),
-            InlineKeyboardButton("❤️ Movie channel ❤️", url=invite_link2.invite_link),
-        ],
-        [
-            InlineKeyboardButton('🤔 Why I Am Joining? 🤔', callback_data='sinfo')
-        ]
-    ]
-
-    if message.command[1] != "subscribe":
         try:
-            kk, file_id = message.command[1].split("_", 1)
-            btn.append([InlineKeyboardButton("↻ Try Again", callback_data=f"checksub#{kk}#{file_id}")])
-        except (IndexError, ValueError):
-            btn.append([InlineKeyboardButton("↻ Try Again", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+            invite_link1 = await client.create_chat_invite_link(int(FIRST_CHANNEL))
+            invite_link2 = await client.create_chat_invite_link(int(SECOND_CHANNEL))
+        except ChatAdminRequired:
+            logger.error("Make sure Bot is admin in Forcesub channels")
+            return
 
-    await client.send_photo(
-        chat_id=message.from_user.id,
-        photo="https://telegra.ph/file/20b4aaaddb8aba646e53c.jpg",
-        caption="**You are not in one of our updates and movie channel, so you won't receive the movie file...\n"
-                "If you want the movie file, click on the '❤️ Updates Channel' and '❤️ Movie channel' buttons below and join both of our channels,\n"
-                "then click on the '↻ Try Again' button below...\n"
-                "Then you will get the movie files...\n\n"
-                "आप हमारे Updates और movie channel में join नहीं हैं, इसलिए आपको मूवी फ़ाइल नहीं मिल पाएंगी...\n"
-                "यदि आप मूवी फ़ाइल चाहते हैं, तो नीचे '🍿Updates और Movie ᴄʜᴀɴɴᴇʟ🍿' बटन पर क्लिक करें और हमारे चैनल से जुड़ें, फिर नीचे '🔄 Try again' बटन पर क्लिक करें...\n"
-                "उसके बाद आपको आपकी मूवी फ़ाइलें मिल जाएंगी।।...**",
-        reply_markup=InlineKeyboardMarkup(btn),
-        parse_mode=enums.ParseMode.MARKDOWN
-    )
+        btn = [
+            [
+                InlineKeyboardButton("❤️ Updates channel ❤️", url=invite_link1.invite_link),
+                InlineKeyboardButton("❤️ Movie channel ❤️", url=invite_link2.invite_link),
+            ],
+            [
+                InlineKeyboardButton('🤔 Why I Am Joining? 🤔', callback_data='sinfo')
+            ]
+        ]
+
+        if message.command[1] != "subscribe":
+            try:
+                kk, file_id = message.command[1].split("_", 1)
+                btn.append([InlineKeyboardButton("↻ Try Again", callback_data=f"checksub#{kk}#{file_id}")])
+            except (IndexError, ValueError):
+                btn.append([InlineKeyboardButton("↻ Try Again", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+
+        await client.send_photo(
+            chat_id=message.from_user.id,
+            photo="https://telegra.ph/file/20b4aaaddb8aba646e53c.jpg",
+            caption="**You are not in one of our updates and movie channel, so you won't receive the movie file...\n"
+                    "If you want the movie file, click on the '❤️ Updates Channel' and '❤️ Movie channel' buttons below and join both of our channels,\n"
+                    "then click on the '↻ Try Again' button below...\n"
+                    "Then you will get the movie files...\n\n"
+                    "आप हमारे Updates और movie channel में join नहीं हैं, इसलिए आपको मूवी फ़ाइल नहीं मिल पाएंगी...\n"
+                    "यदि आप मूवी फ़ाइल चाहते हैं, तो नीचे '🍿Updates और Movie ᴄʜᴀɴɴᴇʟ🍿' बटन पर क्लिक करें और हमारे चैनल से जुड़ें, फिर नीचे '🔄 Try again' बटन पर क्लिक करें...\n"
+                    "उसके बाद आपको आपकी मूवी फ़ाइलें मिल जाएंगी।।...**",
+            reply_markup=InlineKeyboardMarkup(btn),
+            parse_mode=enums.ParseMode.MARKDOWN
+        )
 
 # Message for "Why I Am Joining?" button
 sinfo_message = """🫣 This is our backup channel and movie 🍿 channel. If Telegram bans our group, the link to the new group will be available here and on the second channel, you can get movies in high quality😄.\n\nयह हमारे बैकअप और मूवी चैनल है। अगर टेलीग्राम हमारे ग्रुप को बैन कर देता है, तो नए ग्रुप की लिंक यहां मिलेगी और दूसरे चैनल से आप मूवी को high quality में देख सकते है।😅"""
