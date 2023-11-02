@@ -47,7 +47,7 @@ async def save_group(bot, message):
                     InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz"),
                     InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
                  ],[
-                    InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=WATCH_ONLINE_FAST_DOWNLOAD_VIDEO)
+                    InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=VID1)
                   ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -76,7 +76,7 @@ async def save_group(bot, message):
                                                                            InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz"),
                                                                            InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
                                                                         ],[
-                                                                           InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=WATCH_ONLINE_FAST_DOWNLOAD_VIDEO)
+                                                                           InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=VID1)
                                                                          ]]
                                                  ),
                                                  parse_mode=enums.ParseMode.HTML
@@ -110,7 +110,7 @@ async def leave_a_chat(bot, message):
                     InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz"),
                     InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
                  ],[
-                    InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=WATCH_ONLINE_FAST_DOWNLOAD_VIDEO)
+                    InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=VID1)
                   ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
