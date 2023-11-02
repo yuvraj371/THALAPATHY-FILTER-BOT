@@ -31,9 +31,10 @@ async def start(client, message):
                         InlineKeyboardButton('❓How to Download', url="https://t.me/Infinity_XBotz/5"), 
                         InlineKeyboardButton('😇Bot owner😇', url="https://t.me/Madhuri_niranjan")
                    ], [
-                        InlineKeyboardButton('❤️ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ❤️', url=CHNL_LNK)
+                        InlineKeyboardButton('❤️Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ❤️', url=CHNL_LNK),
+                        InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
                    ], [
-                        InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
+                        InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=WATCH_ONLINE/FAST_DOWNLOAD_VIDEO)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup, disable_web_page_preview=True)
@@ -59,9 +60,10 @@ async def start(client, message):
                     InlineKeyboardButton('❓How to Download', url="https://t.me/Infinity_XBotz/5"),
                     InlineKeyboardButton('😇Bot owner😇', url="https://telegram.me/Madhuri_niranjan")
                ], [
-                    InlineKeyboardButton('❤️ Join Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ❤️', url=CHNL_LNK)
-               ], [
-                    InlineKeyboardButton('❤️ Jᴏɪn Movie Cʜᴀɴɴᴇl ❤️', url=CHNL2_LNK)
+                    InlineKeyboardButton('❤️Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ❤️', url=CHNL_LNK),
+                    InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇl❤️', url=CHNL2_LNK)
+               ], [                 
+                    InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=WATCH_ONLINE/FAST_DOWNLOAD_VIDEO)
                  ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_sticker("CAACAgUAAxkBAAEBvlVk7YKnYxIHVnKW2PUwoibIR2ygGAACBAADwSQxMYnlHW4Ls8gQHgQ") 
@@ -180,7 +182,7 @@ async def start(client, message):
                                 InlineKeyboardButton('😇Bot owner😇', url="https://t.me/Madhuri_niranjan"),
                                 InlineKeyboardButton('❤️Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ❤️', url=CHNL_LNK)
                             ],[
-                                InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
+                                InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
                             ],[
                                 InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
                             ]
@@ -204,7 +206,7 @@ async def start(client, message):
                                 InlineKeyboardButton("😇Bot owner😇", url="t.me/Madhuri_niranjan"),
                                 InlineKeyboardButton("❤️Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ❤️", url=CHNL_LNK)
                             ],[
-                                InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
+                                InlineKeyboardButton('❤️Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
                             ],[
                                 InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
                             ]
@@ -299,7 +301,7 @@ async def start(client, message):
                         InlineKeyboardButton('😇Bot owner😇', url="https://telegram.me/Madhuri_niranjan"),                        
                         InlineKeyboardButton('❤️Update channel❤️', url=CHNL_LNK)
                     ], [
-                        InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
+                        InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
                     ]
                 ]
             )
@@ -327,7 +329,7 @@ async def start(client, message):
                         InlineKeyboardButton('😇Bot owner😇', url="https://telegram.me/Madhuri_niranjan"),                        
                         InlineKeyboardButton('❤️Update channel❤️', url=CHNL_LNK)
                     ], [
-                        InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
+                        InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
                     ]
                 ]
             )
@@ -380,7 +382,7 @@ async def start(client, message):
                                 InlineKeyboardButton("😇Bot owner😇", url="t.me/Madhuri_niranjan"),
                                 InlineKeyboardButton("❤️Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ❤️", url=CHNL_LNK)
                             ],[
-                                InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
+                                InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
                             ],[   
                                 InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
                             ]
@@ -431,7 +433,7 @@ async def start(client, message):
                             InlineKeyboardButton('😇Bot owner😇', url="https://telegram.me/Madhuri_niranjan"),                        
                             InlineKeyboardButton('❤️Update channel❤️', url=CHNL_LNK)
                        ],[
-                            InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
+                            InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
                        ]                  
                     ]
                 )
@@ -465,9 +467,9 @@ async def start(client, message):
                                 InlineKeyboardButton('🎥 Movie 🍿 group', url="https://t.me/+Qn6fthcb7wI0ZTk1")
                             ],[
                                 InlineKeyboardButton("😇Bot owner😇", url="t.me/Madhuri_niranjan"),
-                                InlineKeyboardButton("❤️ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ❤️", url=CHNL_LNK)
+                                InlineKeyboardButton("❤️Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ❤️", url=CHNL_LNK)
                             ],[
-                                InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
+                                InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
                             ],[   
                                 InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
                             ]
@@ -537,7 +539,7 @@ async def start(client, message):
                                 InlineKeyboardButton("😇Bot owner😇", url="t.me/Madhuri_niranjan"),
                                 InlineKeyboardButton("❤️Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ❤️", url=CHNL_LNK)
                             ],[
-                                InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
+                                InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
                             ],[   
                                 InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
                             ]
