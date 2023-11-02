@@ -34,7 +34,7 @@ async def start(client, message):
                         InlineKeyboardButton('❤️Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ❤️', url=CHNL_LNK),
                         InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
                    ], [
-                        InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=WATCH_ONLINE/FAST_DOWNLOAD_VIDEO)
+                        InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=WATCH_ONLINE_FAST_DOWNLOAD_VIDEO)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup, disable_web_page_preview=True)
@@ -63,7 +63,7 @@ async def start(client, message):
                     InlineKeyboardButton('❤️Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ❤️', url=CHNL_LNK),
                     InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇl❤️', url=CHNL2_LNK)
                ], [                 
-                    InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=WATCH_ONLINE/FAST_DOWNLOAD_VIDEO)
+                    InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=WATCH_ONLINE_FAST_DOWNLOAD_VIDEO)
                  ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_sticker("CAACAgUAAxkBAAEBvlVk7YKnYxIHVnKW2PUwoibIR2ygGAACBAADwSQxMYnlHW4Ls8gQHgQ") 
