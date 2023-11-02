@@ -75,7 +75,6 @@ async def start(client, message):
         )
         return
 
-try:
     if FIRST_CHANNEL and SECOND_CHANNEL and not await is_subscribed(client, message):
         try:
             invite_link1 = await client.create_chat_invite_link(int(FIRST_CHANNEL))
