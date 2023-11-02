@@ -102,7 +102,7 @@ async def start(client, message):
                 btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_photo(
             chat_id=message.from_user.id,
-            photo="https://telegra.ph/file/20b4aaaddb8aba646e53c.jpg",
+            photo="https://telegra.ph/file/ac5a81226569541b21a23.jpg",
             caption="**You are not in one of our updates and movie channel, so you won't receive the movie file...\n"
                     "If you want the movie file, click on the '❤️ Updates Channel' and '❤️ Movie channel' buttons below and join both of our channels,\n"
                     "then click on the '↻ Try Again' button below...\n"
