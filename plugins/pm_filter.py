@@ -84,7 +84,7 @@ async def give_filter(client, message):
                                                             InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5"),
                                                             InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
                                                          ],[
-                                                            InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=WATCH_ONLINE/FAST_DOWNLOAD_VIDEO)
+                                                            InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=WATCH_ONLINE_FAST_DOWNLOAD_VIDEO)
                                                           ]])
           )
             
@@ -113,7 +113,7 @@ async def pm_text(bot, message):
                                              InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5"),
                                              InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
                                           ],[
-                                             InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=WATCH_ONLINE/FAST_DOWNLOAD_VIDEO)
+                                             InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=WATCH_ONLINE_FAST_DOWNLOAD_VIDEO)
                                            ]])
     )
     await bot.send_message(
@@ -1337,7 +1337,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('❤️Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ❤️', url=CHNL_LNK),
                     InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
                 ],[
-                    InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=WATCH_ONLINE/FAST_DOWNLOAD_VIDEO)
+                    InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=WATCH_ONLINE_FAST_DOWNLOAD_VIDEO)
                   ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
