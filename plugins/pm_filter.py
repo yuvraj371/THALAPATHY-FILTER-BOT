@@ -82,7 +82,9 @@ async def give_filter(client, message):
                                                             InlineKeyboardButton("😇Bot owner😇 ", url="https://t.me/Madhuri_niranjan")
                                                          ],[
                                                             InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5"),
-                                                            InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
+                                                            InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
+                                                         ],[
+                                                            InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=WATCH_ONLINE/FAST_DOWNLOAD_VIDEO)
                                                           ]])
           )
             
@@ -110,6 +112,8 @@ async def pm_text(bot, message):
                                           ],[
                                              InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5"),
                                              InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
+                                          ],[
+                                             InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=WATCH_ONLINE/FAST_DOWNLOAD_VIDEO)
                                            ]])
     )
     await bot.send_message(
@@ -1330,8 +1334,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('❓How to Download', url="https://t.me/Infinity_XBotz/5"),
                     InlineKeyboardButton('😇Bot owner😇', url="https://telegram.me/Madhuri_niranjan")
                 ],[
-                    InlineKeyboardButton('❤️ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ❤️', url=CHNL_LNK),
-                    InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
+                    InlineKeyboardButton('❤️Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ❤️', url=CHNL_LNK),
+                    InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
+                ],[
+                    InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=WATCH_ONLINE/FAST_DOWNLOAD_VIDEO)
                   ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
