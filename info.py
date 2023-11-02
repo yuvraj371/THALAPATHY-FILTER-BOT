@@ -84,7 +84,7 @@ SECOND_CHANNEL = environ.get('SECOND_CHANNEL', '-1001992981386')
 FQDN = environ.get('FQDN', 'srv31221116.ultasrv.net:49152')
 first_channel = environ.get('FIRST_CHANNEL', '-1001984741311')
 second_channel = environ.get('SECOND_CHANNEL', '-1001992981386')
-WATCH_ONLINE/FAST_DOWNLOAD_VIDEO = environ.get('VID1', 'https://telegram.me/Infinity_XBotz')
+VID1 = environ.get('VID1', 'https://telegram.me/Infinity_XBotz')
 
 LANGUAGES = ["malayalam", "mal", "tamil", "tam" ,"english", "eng", "hindi", "hin", "telugu", "tel", "kannada", "kan"]
 
