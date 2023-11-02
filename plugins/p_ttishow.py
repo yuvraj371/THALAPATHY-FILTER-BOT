@@ -45,7 +45,9 @@ async def save_group(bot, message):
                     InlineKeyboardButton("😇Bot owner😇 ", url="https://t.me/Madhuri_niranjan")                                                     
                  ],[
                     InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz"),
-                    InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
+                    InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
+                 ],[
+                    InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=WATCH_ONLINE/FAST_DOWNLOAD_VIDEO)
                   ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -72,7 +74,9 @@ async def save_group(bot, message):
                                                                            InlineKeyboardButton("😇Bot owner😇 ", url="https://t.me/Madhuri_niranjan")
                                                                         ],[
                                                                            InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz"),
-                                                                           InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
+                                                                           InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
+                                                                        ],[
+                                                                           InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=WATCH_ONLINE/FAST_DOWNLOAD_VIDEO)
                                                                          ]]
                                                  ),
                                                  parse_mode=enums.ParseMode.HTML
@@ -104,7 +108,9 @@ async def leave_a_chat(bot, message):
                     InlineKeyboardButton("😇Bot owner😇 ", url="https://t.me/Madhuri_niranjan")                                                     
                  ],[
                     InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz"),
-                    InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
+                    InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
+                 ],[
+                    InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=WATCH_ONLINE/FAST_DOWNLOAD_VIDEO)
                   ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
