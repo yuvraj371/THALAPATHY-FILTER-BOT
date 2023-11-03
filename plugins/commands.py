@@ -90,7 +90,7 @@ async def start(client, message):
                 InlineKeyboardButton("❤️ Movie channel ❤️", url=invite_link2.invite_link),
                ],
                [
-                InlineKeyboardButton('🤔 Why I Am Joining? 🤔', url='https://telegram.me/Infinity_XBotz')
+                InlineKeyboardButton('🤔 Why I Am Joining? 🤔', url='https://telegram.me/Infinity_XBotz/45')
                ]
               ]
 
