@@ -88,47 +88,54 @@ async def give_filter(client, message):
                                                           ]])
           )
             
-@Client.on_message(filters.private & filters.text & filters.incoming)
-async def pm_text(bot, message):
-    content = message.text
-    user = message.from_user
-    user_name = user.first_name
-    if user.last_name:
-        user_name += " " + user.last_name
-    user_link = f"[{user_name}](tg://user?id={user.id})"
-    user_id = message.from_user.id
-    if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
-    if user_id in ADMINS: return # ignore admins
-    await message.reply_text(
-         text = f"<b>ʜᴇʏ {user} 😍,\n\n"
-       f"ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs 🍿 ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ɪᴛ ɪɴ ᴏᴜʀ "
-       f"<a href=https://t.me/+Qn6fthcb7wI0ZTk1>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ Movie group ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇\n\n"
-       f"नमस्कार {user} 😍,\n\n"
-       f"आपको यहां पर movie 🍿 नहीं मिलेगी कृपया हमारे "
-       f"<a href=https://t.me/+Qn6fthcb7wI0ZTk1>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> में search 🔎 करें या "
-       f"नीचे Movie group ʙᴜᴛᴛᴏɴ पर क्लिक करे 👇</b>",   
-         reply_markup=InlineKeyboardMarkup([[
-                                             InlineKeyboardButton("🎥Movie group", url="https://t.me/+Qn6fthcb7wI0ZTk1"),
-                                             InlineKeyboardButton("👨‍💻support group ", url="https://t.me/Infinity_XBotz_support")
-                                          ],[ 
-                                             InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz"),
-                                             InlineKeyboardButton("😇Bot owner😇 ", url="https://t.me/Madhuri_niranjan")
-                                          ],[
-                                             InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5"),
-                                             InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)
-                                          ],[
-                                             InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=VID1)
-                                           ]])
-    )
-    await bot.send_message(
-        chat_id=LOG_CHANNEL,
-        text=f"<b>#𝐏𝐌_𝐌𝐒𝐆\n\nNᴀᴍᴇ : {user_link}\n\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}</b>"
-    )
+
 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
-    curr_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
+    curr_time = datetime.now(pytz.timezone('Asi@Client.on_message(filters.private & filters.text & filters.incoming)
+async def pm_text(bot, message):
+    content = message.text
+    user = message.from_user
+    first_name = user.first_name
+    last_name = user.last_name
+    user_id = user.id
+
+    if content.startswith("/") or content.startswith("#"):
+        return  # ignore commands and hashtags
+
+    if user_id in ADMINS:
+        return  # ignore admins
+
+    user_link = f"[{first_name}](tg://user?id={user_id})"
+    message_text = (
+        f"<b>ʜᴇʏ {user_link} 😍,\n\n"
+        f"ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs 🍿 ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ɪᴛ ɪɴ ᴏᴜʀ "
+        f"<a href=https://t.me/+Qn6fthcb7wI0ZTk1>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ Movie group ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇\n\n"
+        f"नमस्कार {user_link} 😍,\n\n"
+        f"आपको यहां पर movie 🍿 नहीं मिलेगी कृपया हमारे "
+        f"<a href=https://t.me/+Qn6fthcb7wI0ZTk1>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> में search 🔎 करें या "
+        f"नीचे Movie group ʙᴜᴛᴛᴏɴ पर क्लिक करे 👇</b>"
+    )
+
+    await message.reply_text(
+        text=message_text,
+        reply_markup=InlineKeyboardMarkup([
+            [InlineKeyboardButton("🎥Movie group", url="https://t.me/+Qn6fthcb7wI0ZTk1"),
+             InlineKeyboardButton("👨‍💻support group", url="https://t.me/Infinity_XBotz_support")],
+            [InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz"),
+             InlineKeyboardButton("😇Bot owner😇", url="https://t.me/Madhuri_niranjan")],
+            [InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5"),
+             InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)],
+            [InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=VID1)]
+        ])
+    )
+
+    await bot.send_message(
+        chat_id=LOG_CHANNEL,
+        text=f"<b>#𝐏𝐌_𝐌𝐒𝐆\n\nNᴀᴍᴇ : {user_link}\n\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}</b>"
+    )
+a/Kolkata')).time()
     if int(req) not in [query.from_user.id, 0]:
         return await query.answer(script.ALRT_TXT.format(query.from_user.first_name), show_alert=True)
     try:
