@@ -50,8 +50,8 @@ loop = asyncio.get_event_loop()
 
 async def update_from_upstream():
     try:
-        subprocess.run(['git', 'fetch', 'upstream'])
-        subprocess.run(['git', 'merge', 'upstream/main', '--ff-only'])
+        subprocess.run(['git', 'fetch', 'https://github.com/yuvraj371/THALAPATHY-FILTER-BOT'])
+        subprocess.run(['git', 'merge', 'AAFIB/main', '--ff-only'])
         logging.info("Updated from upstream successfully.")
     except Exception as e:
         logging.error(f"Failed to update from upstream: {e}")
