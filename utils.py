@@ -207,6 +207,17 @@ async def save_group_settings(group_id, key, value):
     current[key] = value
     temp.SETTINGS[group_id] = current
     await db.update_settings(group_id, current)
+
+def convert_time(seconds):
+    mseconds = seconds * 1000
+    periods = [('d', 86400000), ('h', 3600000), ('m', 60000), ('s', 1000), ('ms', 1)]
+    result = ''
+    for period_name, period_seconds in periods:
+        if mseconds >= period_seconds:
+            period_value, mseconds = divmod(mseconds, period_seconds)
+            result += f'{int(period_value)}{period_name}'
+    if result == '':
+        return '0ms'
     
 def get_size(size):
     """Get size in readable format"""
