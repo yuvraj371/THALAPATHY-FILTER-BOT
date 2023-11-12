@@ -39,12 +39,22 @@ from pyrogram import idle
 from lazybot import LazyPrincessBot
 from util.keepalive import ping_server
 from lazybot.clients import initialize_clients
+import subprocess
 
 
 ppath = "plugins/*.py"
 files = glob.glob(ppath)
 LazyPrincessBot.start()
 loop = asyncio.get_event_loop()
+
+
+async def update_from_upstream():
+    try:
+        subprocess.run(['git', 'fetch', 'upstream'])
+        subprocess.run(['git', 'merge', 'upstream/main', '--ff-only'])
+        logging.info("Updated from upstream successfully.")
+    except Exception as e:
+        logging.error(f"Failed to update from upstream: {e}")
 
 
 async def Lazy_start():
@@ -87,12 +97,14 @@ async def Lazy_start():
     await app.setup()
     bind_address = "0.0.0.0"
     await web.TCPSite(app, bind_address, PORT).start()
-    await idle()
+    
+    if ENABLE_UPSTREAM_UPDATE:
+        await update_from_upstream()
 
+    await idle()
 
 if __name__ == '__main__':
     try:
         loop.run_until_complete(Lazy_start())
     except KeyboardInterrupt:
         logging.info('Service Stopped Bye 👋')
-
