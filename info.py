@@ -85,6 +85,7 @@ FQDN = environ.get('FQDN', 'srv31221116.ultasrv.net:49152')
 first_channel = environ.get('FIRST_CHANNEL', '-1001984741311')
 second_channel = environ.get('SECOND_CHANNEL', '-1001992981386')
 VID1 = environ.get('VID1', 'https://telegram.me/Infinity_XBotz/46')
+ENABLE_UPSTREAM_UPDATE = is_enabled((environ.get('ENABLE_UPSTREAM_UPDATE', "True")), True)
 
 LANGUAGES = ["malayalam", "mal", "tamil", "tam" ,"english", "eng", "hindi", "hin", "telugu", "tel", "kannada", "kan"]
 
