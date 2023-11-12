@@ -44,8 +44,8 @@ async def save_group(bot, message):
                     InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5"),                                                  
                     InlineKeyboardButton("😇Bot owner😇 ", url="https://t.me/Madhuri_niranjan")                                                     
                  ],[
-                    InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz"),
-                    InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
+                    InlineKeyboardButton("Update channel", url="https://t.me/Infinity_XBotz"),
+                    InlineKeyboardButton('Movie Cʜᴀɴɴᴇʟ', url=CHNL2_LNK)
                  ],[
                     InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=VID1)
                   ]]
@@ -107,8 +107,8 @@ async def leave_a_chat(bot, message):
                     InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5"),                                                  
                     InlineKeyboardButton("😇Bot owner😇 ", url="https://t.me/Madhuri_niranjan")                                                     
                  ],[
-                    InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz"),
-                    InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
+                    InlineKeyboardButton("Update channel", url="https://t.me/Infinity_XBotz"),
+                    InlineKeyboardButton('Movie Cʜᴀɴɴᴇʟ', url=CHNL2_LNK)
                  ],[
                     InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=VID1)
                   ]]
