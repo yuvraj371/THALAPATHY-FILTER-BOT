@@ -78,11 +78,11 @@ async def give_filter(client, message):
                                                             InlineKeyboardButton("🎥Movie group", url="https://t.me/+Qn6fthcb7wI0ZTk1"),
                                                             InlineKeyboardButton("👨‍💻support group ", url="https://t.me/Infinity_XBotz_support")
                                                          ],[ 
-                                                            InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz"),
+                                                            InlineKeyboardButton("Update channel", url="https://t.me/Infinity_XBotz"),
                                                             InlineKeyboardButton("😇Bot owner😇 ", url="https://t.me/Madhuri_niranjan")
                                                          ],[
                                                             InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5"),
-                                                            InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
+                                                            InlineKeyboardButton('Movie Cʜᴀɴɴᴇʟ', url=CHNL2_LNK)
                                                          ],[
                                                             InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=VID1)
                                                           ]])
@@ -120,10 +120,10 @@ async def pm_text(bot, message):
         reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton("🎥Movie group", url="https://t.me/+Qn6fthcb7wI0ZTk1"),
              InlineKeyboardButton("👨‍💻support group", url="https://t.me/Infinity_XBotz_support")],
-            [InlineKeyboardButton("💓Update channel💓", url="https://t.me/Infinity_XBotz"),
+            [InlineKeyboardButton("Update channel", url="https://t.me/Infinity_XBotz"),
              InlineKeyboardButton("😇Bot owner😇", url="https://t.me/Madhuri_niranjan")],
             [InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5"),
-             InlineKeyboardButton('❤️ Jᴏɪɴ Movie Cʜᴀɴɴᴇʟ ❤️', url=CHNL2_LNK)],
+             InlineKeyboardButton('Movie Cʜᴀɴɴᴇʟ', url=CHNL2_LNK)],
             [InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=VID1)]
         ])
     )
@@ -1346,8 +1346,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('❓How to Download', url="https://t.me/Infinity_XBotz/5"),
                     InlineKeyboardButton('😇Bot owner😇', url="https://telegram.me/Madhuri_niranjan")
                 ],[
-                    InlineKeyboardButton('❤️Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ❤️', url=CHNL_LNK),
-                    InlineKeyboardButton('❤️Movie Cʜᴀɴɴᴇʟ❤️', url=CHNL2_LNK)
+                    InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK),
+                    InlineKeyboardButton('Movie Cʜᴀɴɴᴇʟ', url=CHNL2_LNK)
                 ],[
                     InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=VID1)
                   ]]
