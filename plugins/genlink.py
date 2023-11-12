@@ -3,7 +3,7 @@ from pyrogram import filters, Client, enums
 from pyrogram.errors.exceptions.bad_request_400 import ChannelInvalid, UsernameInvalid, UsernameNotModified
 from info import ADMINS, LOG_CHANNEL, FILE_STORE_CHANNEL, PUBLIC_FILE_STORE
 from database.ia_filterdb import unpack_new_file_id
-from utils import temp
+from utils import temp, get_shortlink
 import re
 import os
 import json
@@ -34,9 +34,8 @@ async def gen_link_s(bot, message):
     string = 'filep_' if message.text.lower().strip() == "/plink" else 'file_'
     string += file_id
     outstr = base64.urlsafe_b64encode(string.encode("ascii")).decode().strip("=")
-    await message.reply(f"Here is your Link:\nhttps://t.me/{temp.U_NAME}?start={outstr}")
-    
-    
+    await message.reply(f"Here is your Link:\n{await get_shortlink(temp.U_NAME, outstr)}")
+
 @Client.on_message(filters.command(['batch', 'pbatch']) & filters.create(allowed))
 async def gen_link_batch(bot, message):
     if " " not in message.text:
@@ -73,7 +72,7 @@ async def gen_link_batch(bot, message):
     except Exception as e:
         return await message.reply(f'Errors - {e}')
 
-    sts = await message.reply("Generating link for your message.\nThis may take time depending upon number of messages")
+    sts = await message.reply("Generating link for your message.\nThis may take time depending upon the number of messages")
     if chat_id in FILE_STORE_CHANNEL:
         string = f"{f_msg_id}_{l_msg_id}_{chat_id}_{cmd.lower().strip()}"
         b_64 = base64.urlsafe_b64encode(string.encode("ascii")).decode().strip("=")
@@ -123,3 +122,4 @@ async def gen_link_batch(bot, message):
     os.remove(f"batchmode_{message.from_user.id}.json")
     file_id, ref = unpack_new_file_id(post.document.file_id)
     await sts.edit(f"Here is your link\nContains `{og_msg}` files.\n https://t.me/{temp.U_NAME}?start=BATCH-{file_id}")
+    
