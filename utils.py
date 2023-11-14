@@ -207,17 +207,6 @@ async def save_group_settings(group_id, key, value):
     current[key] = value
     temp.SETTINGS[group_id] = current
     await db.update_settings(group_id, current)
-
-def convert_time(seconds):
-    mseconds = seconds * 1000
-    periods = [('d', 86400000), ('h', 3600000), ('m', 60000), ('s', 1000), ('ms', 1)]
-    result = ''
-    for period_name, period_seconds in periods:
-        if mseconds >= period_seconds:
-            period_value, mseconds = divmod(mseconds, period_seconds)
-            result += f'{int(period_value)}{period_name}'
-    if result == '':
-        return '0ms'
     
 def get_size(size):
     """Get size in readable format"""
@@ -751,4 +740,15 @@ async def get_cap(settings, remaining_seconds, files, query, total_results, sear
         cap+="<b><u>🍿 Your Movie Files 👇</u></b>\n\n"
         for file in files:
             cap += f"<b>📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></b>"
-    return cap
+
+def convert_time(seconds):
+    mseconds = seconds * 1000
+    periods = [('d', 86400000), ('h', 3600000), ('m', 60000), ('s', 1000), ('ms', 1)]
+    result = ''
+    for period_name, period_seconds in periods:
+        if mseconds >= period_seconds:
+            period_value, mseconds = divmod(mseconds, period_seconds)
+            result += f'{int(period_value)}{period_name}'
+    if result == '':
+        return '0ms'
+    return result
