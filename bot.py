@@ -6,6 +6,9 @@ from pathlib import Path
 from pyrogram import idle
 import logging
 import logging.config
+from time import time 
+
+BOT_START = time()
 
 # Get logging configurations
 logging.config.fileConfig('logging.conf')
