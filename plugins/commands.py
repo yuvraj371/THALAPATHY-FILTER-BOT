@@ -12,6 +12,7 @@ from info import CHANNELS, ADMINS, FIRST_CHANNEL, SECOND_CHANNEL, LOG_CHANNEL, P
 from utils import get_settings, get_size, is_subscribed, save_group_settings, temp, verify_user, check_token, check_verification, get_token, get_shortlink, get_tutorial, convert_time
 from database.connections_mdb import active_connection
 from time import time
+from bot import BOT_START
 # from plugins.pm_filter import ENABLE_SHORTLINK
 import re, asyncio, os, sys
 import json
