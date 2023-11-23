@@ -8,8 +8,6 @@ import logging
 import logging.config
 from time import time 
 
-BOT_START = time()
-
 # Get logging configurations
 logging.config.fileConfig('logging.conf')
 logging.getLogger().setLevel(logging.INFO)
