@@ -84,7 +84,7 @@ async def give_filter(client, message):
                                                             InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5"),
                                                             InlineKeyboardButton('Movie Cʜᴀɴɴᴇʟ', url=CHNL2_LNK)
                                                          ],[
-                                                            InlineKeyboardButton('⚡Fast DL /🖥️Watch OL(Tutorial❓)', url=VID1)
+                                                            InlineKeyboardButton('⚡Fast DL / 🖥️Watch OL (Tutorial❓)', url=VID1)
                                                           ]])
           )
             
@@ -124,7 +124,7 @@ async def pm_text(bot, message):
              InlineKeyboardButton("😇Bot owner😇", url="https://t.me/Madhuri_niranjan")],
             [InlineKeyboardButton("🗃️How to download", url="https://t.me/Infinity_XBotz/5"),
              InlineKeyboardButton('Movie Cʜᴀɴɴᴇʟ', url=CHNL2_LNK)],
-            [InlineKeyboardButton('⚡Fast DL /🖥️Watch OL(Tutorial❓)', url=VID1)]
+            [InlineKeyboardButton('⚡Fast DL / 🖥️Watch OL (Tutorial❓)', url=VID1)]
         ])
     )
 
@@ -1349,7 +1349,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK),
                     InlineKeyboardButton('Movie Cʜᴀɴɴᴇʟ', url=CHNL2_LNK)
                 ],[
-                    InlineKeyboardButton('⚡Fast DL /🖥️Watch OL(Tutorial❓)', url=VID1)
+                    InlineKeyboardButton('⚡Fast DL / 🖥️Watch OL (Tutorial❓)', url=VID1)
                   ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
