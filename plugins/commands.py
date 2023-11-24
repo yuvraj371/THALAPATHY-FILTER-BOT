@@ -34,7 +34,7 @@ async def start(client, message):
                         InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK),
                         InlineKeyboardButton('Movie Cʜᴀɴɴᴇʟ', url=CHNL2_LNK)
                    ], [
-                        InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=VID1)
+                        InlineKeyboardButton('⚡Fast DL /🖥️Watch OL(Tutorial❓)', url=VID1)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         uptime = convert_time(time() - BOT_START)
@@ -64,7 +64,7 @@ async def start(client, message):
                     InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK),
                     InlineKeyboardButton('Movie Cʜᴀɴɴᴇl', url=CHNL2_LNK)
                ], [                 
-                    InlineKeyboardButton('🚀 Fast Download / Watch Online 🖥️', url=VID1)
+                    InlineKeyboardButton('⚡Fast DL /🖥️Watch OL(Tutorial❓)', url=VID1)
                  ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_sticker("CAACAgUAAxkBAAEBvlVk7YKnYxIHVnKW2PUwoibIR2ygGAACBAADwSQxMYnlHW4Ls8gQHgQ") 
