@@ -405,7 +405,11 @@ async def start(client, message):
         return    
         
     elif data.startswith("files"):
-        chat_id = message.chat.id
+        user = message.from_user.id
+    if temp.SHORT.get(user) == None:
+        await message.reply_text(text="<b>Please Search Again in Group</b>")
+    else:
+        chat_id = temp.SHORT.get(user)
         settings = await get_settings(chat_id)
         if settings['is_shortlink'] and user not in PREMIUM_USER:
             files_ = await get_file_details(file_id)
@@ -1201,27 +1205,3 @@ async def stop_button(bot, message):
     await asyncio.sleep(3)
     await msg.edit("**✅️ 𝙱𝙾𝚃 𝙸𝚂 𝚁𝙴𝚂𝚃𝙰𝚁𝚃𝙴𝙳. 𝙽𝙾𝚆 𝚈𝙾𝚄 𝙲𝙰𝙽 𝚄𝚂𝙴 𝙼𝙴**")
     os.execl(sys.executable, sys.executable, *sys.argv)
-
-@Client.on_message(filters.command("PREMIUM_USER_ID") & filters.user(ADMINS))
-async def add_premium_user(client, message):
-    # Check if the command was sent by an admin
-    if message.from_user.id in YOUR_BOT_ADMINS:
-        try:
-            # Extract user ID from the command
-            user_id = int(message.command[1])
-            
-            # Add user as premium user
-            await db.add_premium_user(user_id)
-            
-            # Update the in-memory premium users list
-            temp.PREMIUM_USERS.add(user_id)
-            
-            # Send a confirmation message
-            await message.reply_text(f"😎User ID {user_id} added✅ as a premium user.")
-        except (IndexError, ValueError):
-            # Handle errors if the command is not well-formed
-            await message.reply_text("❌Invalid command format. Please use /PREMIUM_USER_ID <user_id>")
-    else:
-        # If the user is not an admin, send a message indicating permission denied
-        await message.reply_text("😞Permission denied❌. This command is only for admins.")
-        
