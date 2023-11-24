@@ -1202,7 +1202,7 @@ async def stop_button(bot, message):
     await msg.edit("**✅️ 𝙱𝙾𝚃 𝙸𝚂 𝚁𝙴𝚂𝚃𝙰𝚁𝚃𝙴𝙳. 𝙽𝙾𝚆 𝚈𝙾𝚄 𝙲𝙰𝙽 𝚄𝚂𝙴 𝙼𝙴**")
     os.execl(sys.executable, sys.executable, *sys.argv)
 
-@Client.on_message(filters.command("PREMIUM_USER_ID") & filters.user([ADMINS]))
+@Client.on_message(filters.command("PREMIUM_USER_ID") & filters.user(ADMINS))
 async def add_premium_user(client, message):
     # Check if the command was sent by an admin
     if message.from_user.id in YOUR_BOT_ADMINS:
