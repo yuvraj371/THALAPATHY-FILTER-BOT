@@ -557,6 +557,7 @@ async def start(client, message):
     f"<b><i>Please forward this File/Video to your Saved Messages and start the download there.</i></b>\n\n"
     f"Thank you 🙏 😊\n\n"
     f"नोट: कॉपीराइट से बचने के लिए यह 🗃️ file/video 10 मिनट के बाद हटा दिया जाता है, इसलिए 🗃️ file/video को saved messages या कहीं और forward करले\n\n"
+    f"और वहीं पर download करे यहां पर download न करे\n\n"                   
     f"धन्यवाद 🙏😌",quote=True)
     await asyncio.sleep(600)
     await msg.delete()
