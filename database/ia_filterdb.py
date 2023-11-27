@@ -13,10 +13,14 @@ from utils import get_settings, save_group_settings
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-
 client = AsyncIOMotorClient(DATABASE_URI)
 db = client[DATABASE_NAME]
 instance = Instance.from_db(db)
+
+
+logger.info(f"Connected to MongoDB: {client.server_info()}")
+logger.info(f"Database: {DATABASE_NAME}")
+logger.info(f"Collection: {COLLECTION_NAME}")
 
 @instance.register
 class Media(Document):
